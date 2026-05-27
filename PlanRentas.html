@@ -122,6 +122,76 @@
     .tl-item, .tl-item:nth-child(even) { justify-content: flex-start; padding: 0 0 0 4rem; }
     .tl-dot { left: 1.5rem; }
   }
+
+  /* RRHH */
+  .org-chart { display: flex; flex-direction: column; align-items: center; margin-bottom: 4rem; }
+  .org-level { display: flex; justify-content: center; gap: 2rem; }
+  .org-level--split { gap: 4rem; }
+  .org-card { background: linear-gradient(135deg, var(--azul-oscuro), #0b2247); color: var(--blanco); border-radius: 14px; padding: 1.4rem 1.8rem; text-align: center; min-width: 200px; max-width: 260px; position: relative; border-bottom: 3px solid var(--dorado); box-shadow: 0 4px 20px var(--sombra); }
+  .org-card--jefe { min-width: 240px; }
+  .org-card--admin { border-bottom-color: var(--azul-claro); }
+  .org-card--inspector { border-bottom-color: rgba(245,168,0,0.5); }
+  .org-badge { position: absolute; top: -10px; right: -10px; background: var(--dorado); color: var(--azul-oscuro); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 0.9rem; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .org-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .org-card h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--dorado); margin-bottom: 0.3rem; }
+  .org-card .org-dep { font-size: 0.78rem; color: var(--gris-med); line-height: 1.4; }
+  .org-connector-v { width: 3px; height: 36px; background: linear-gradient(to bottom, var(--dorado), var(--azul-claro)); margin: 0 auto; }
+  .org-h-line { height: 3px; width: 320px; background: linear-gradient(to right, var(--dorado), var(--azul-claro), var(--dorado)); border-radius: 2px; margin: 0 auto; }
+  .rrhh-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .rrhh-card { background: var(--blanco); border-radius: 14px; overflow: hidden; box-shadow: 0 3px 16px var(--sombra); }
+  .rrhh-card-header { display: flex; align-items: center; gap: 1rem; padding: 1.2rem 1.5rem; color: var(--blanco); }
+  .rrhh-jefe { background: linear-gradient(135deg, var(--azul-oscuro), #0b2247); border-bottom: 3px solid var(--dorado); }
+  .rrhh-admin { background: linear-gradient(135deg, var(--azul-claro), #1a4d8a); border-bottom: 3px solid var(--azul-claro); }
+  .rrhh-inspector { background: linear-gradient(135deg, #1a3a6a, #0d2550); border-bottom: 3px solid rgba(245,168,0,0.6); }
+  .rrhh-badge { background: var(--dorado); color: var(--azul-oscuro); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.1rem; min-width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .rrhh-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .rrhh-card-header h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--dorado); margin-bottom: 0.15rem; }
+  .rrhh-card-header p { font-size: 0.78rem; color: rgba(255,255,255,0.75); }
+  .rrhh-funcs { list-style: none; padding: 1.2rem 1.5rem; }
+  .rrhh-funcs li { font-size: 0.9rem; color: #2d4060; line-height: 1.6; padding: 0.35rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; gap: 0.6rem; }
+  .rrhh-funcs li::before { content: "›"; color: var(--dorado); font-weight: 700; flex-shrink: 0; }
+  .rrhh-funcs li:last-child { border-bottom: none; }
+  .rrhh-nota { margin: 0 1.5rem 1.2rem; background: rgba(245,168,0,0.08); border-left: 3px solid var(--dorado); border-radius: 0 8px 8px 0; padding: 0.7rem 1rem; font-size: 0.85rem; color: #4a5568; line-height: 1.6; }
+  .rrhh-stat { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--azul-oscuro); }
+  @media (max-width: 768px) {
+    .org-level--split { flex-direction: column; align-items: center; gap: 2rem; }
+    .org-h-line { width: 3px; height: 60px; }
+  }
+
+  /* RRHH */
+  .org-chart { display: flex; flex-direction: column; align-items: center; margin-bottom: 4rem; }
+  .org-level { display: flex; justify-content: center; gap: 2rem; }
+  .org-level--split { gap: 4rem; }
+  .org-card { background: linear-gradient(135deg, var(--azul-oscuro), #0b2247); color: var(--blanco); border-radius: 14px; padding: 1.4rem 1.8rem; text-align: center; min-width: 200px; max-width: 260px; position: relative; border-bottom: 3px solid var(--dorado); box-shadow: 0 4px 20px var(--sombra); }
+  .org-card--jefe { min-width: 240px; }
+  .org-card--admin { border-bottom-color: var(--azul-claro); }
+  .org-card--inspector { border-bottom-color: rgba(245,168,0,0.5); }
+  .org-badge { position: absolute; top: -10px; right: -10px; background: var(--dorado); color: var(--azul-oscuro); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 0.9rem; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .org-icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+  .org-card h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--dorado); margin-bottom: 0.3rem; }
+  .org-card .org-dep { font-size: 0.78rem; color: var(--gris-med); line-height: 1.4; }
+  .org-connector-v { width: 3px; height: 36px; background: linear-gradient(to bottom, var(--dorado), var(--azul-claro)); margin: 0 auto; }
+  .org-h-line { height: 3px; width: 320px; background: linear-gradient(to right, var(--dorado), var(--azul-claro), var(--dorado)); border-radius: 2px; margin: 0 auto; }
+  .rrhh-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+  .rrhh-card { background: var(--blanco); border-radius: 14px; overflow: hidden; box-shadow: 0 3px 16px var(--sombra); }
+  .rrhh-card-header { display: flex; align-items: center; gap: 1rem; padding: 1.2rem 1.5rem; color: var(--blanco); }
+  .rrhh-jefe { background: linear-gradient(135deg, var(--azul-oscuro), #0b2247); border-bottom: 3px solid var(--dorado); }
+  .rrhh-admin { background: linear-gradient(135deg, var(--azul-claro), #1a4d8a); border-bottom: 3px solid var(--azul-claro); }
+  .rrhh-inspector { background: linear-gradient(135deg, #1a3a6a, #0d2550); border-bottom: 3px solid rgba(245,168,0,0.6); }
+  .rrhh-badge { background: var(--dorado); color: var(--azul-oscuro); font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.1rem; min-width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .rrhh-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .rrhh-card-header h4 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.04em; color: var(--dorado); margin-bottom: 0.15rem; }
+  .rrhh-card-header p { font-size: 0.78rem; color: rgba(255,255,255,0.75); }
+  .rrhh-funcs { list-style: none; padding: 1.2rem 1.5rem; }
+  .rrhh-funcs li { font-size: 0.9rem; color: #2d4060; line-height: 1.6; padding: 0.35rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; gap: 0.6rem; }
+  .rrhh-funcs li::before { content: "›"; color: var(--dorado); font-weight: 700; flex-shrink: 0; }
+  .rrhh-funcs li:last-child { border-bottom: none; }
+  .rrhh-nota { margin: 0 1.5rem 1.2rem; background: rgba(245,168,0,0.08); border-left: 3px solid var(--dorado); border-radius: 0 8px 8px 0; padding: 0.7rem 1rem; font-size: 0.85rem; color: #4a5568; line-height: 1.6; }
+  .rrhh-stat { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--azul-oscuro); }
+  @media (max-width: 768px) {
+    .org-level--split { flex-direction: column; align-items: center; gap: 2rem; }
+    .org-h-line { width: 3px; height: 60px; }
+  }
 </style>
 </head>
 <body>
@@ -136,7 +206,8 @@
     <li><a href="index.html">Home</a></li>
     <li><a href="#descripcion">Descripci&#243;n</a></li>
     <li><a href="#objetivos">Objetivos</a></li>
-    <li><a href="#periodo">Per&#237;odo</a></li>
+    <li><a href="#periodo">Período</a></li>
+    <li><a href="#rrhh">RRHH</a></li>
   </ul>
 </nav>
 
@@ -283,6 +354,128 @@
     </div>
     <div class="nota-box reveal">
       <p><strong>Horas extraordinarias:</strong> Debido a la naturaleza extraordinaria del evento, se contempla el pago de horas extraordinarias para el personal del Departamento de Rentas Municipales. Durante los d&#237;as peak se podr&#225; implementar jornada continua, con un per&#237;odo de descanso de <strong>30 minutos</strong> por funcionario.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RRHH -->
+<section id="rrhh">
+  <div class="container">
+    <div class="section-tag">Personal del Departamento</div>
+    <h2 class="section-title">Recurso <span>Humano</span></h2>
+    <p class="section-desc">Equipo de funcionarios municipales responsables de la fiscalizaci&#243;n y recaudaci&#243;n durante la Festividad Religiosa de La Tirana 2026.</p>
+
+    <div class="org-chart reveal">
+      <div class="org-level">
+        <div class="org-card org-card--jefe">
+          <div class="org-badge">1</div>
+          <div class="org-icon">&#x1F451;</div>
+          <h4>Encargada</h4>
+          <p class="org-dep">Departamento de Rentas Municipales</p>
+        </div>
+      </div>
+      <div class="org-connector-v"></div>
+      <div class="org-level">
+        <div class="org-card org-card--admin">
+          <div class="org-badge">1</div>
+          <div class="org-icon">&#x1F4CB;</div>
+          <h4>Administrativo</h4>
+          <p class="org-dep">Apoyo administrativo y control</p>
+        </div>
+      </div>
+      <div class="org-connector-v"></div>
+      <div class="org-h-line"></div>
+      <div class="org-connector-v"></div>
+      <div class="org-level org-level--split">
+        <div class="org-card org-card--inspector">
+          <div class="org-badge">4</div>
+          <div class="org-icon">&#x267B;&#xFE0F;</div>
+          <h4>Inspector Recaudador</h4>
+          <p class="org-dep">Aseo Domiciliario</p>
+        </div>
+        <div class="org-card org-card--inspector">
+          <div class="org-badge">8</div>
+          <div class="org-icon">&#x1F3EA;</div>
+          <h4>Inspector Recaudador</h4>
+          <p class="org-dep">Comercio</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rrhh-grid">
+      <div class="rrhh-card reveal">
+        <div class="rrhh-card-header rrhh-jefe">
+          <span class="rrhh-badge">1</span>
+          <div class="rrhh-icon">&#x1F451;</div>
+          <div>
+            <h4>Encargada</h4>
+            <p>Departamento de Rentas Municipales</p>
+          </div>
+        </div>
+        <ul class="rrhh-funcs">
+          <li>Supervisar el funcionamiento general del plan.</li>
+          <li>Coordinar las labores del equipo de fiscalizaci&#243;n.</li>
+          <li>Verificar el cumplimiento de las ordenanzas municipales.</li>
+          <li>Consolidar los informes diarios de recaudaci&#243;n.</li>
+          <li>Informar a la Direcci&#243;n de Administraci&#243;n y Finanzas sobre el desarrollo del plan.</li>
+        </ul>
+      </div>
+      <div class="rrhh-card reveal">
+        <div class="rrhh-card-header rrhh-admin">
+          <span class="rrhh-badge">1</span>
+          <div class="rrhh-icon">&#x1F4CB;</div>
+          <div>
+            <h4>Funcionario Administrativo</h4>
+            <p>Apoyo administrativo y control</p>
+          </div>
+        </div>
+        <ul class="rrhh-funcs">
+          <li>Entrega y control de talonarios de cobro.</li>
+          <li>Registro de puestos comerciales asignados.</li>
+          <li>Control del uso de radios de comunicaci&#243;n.</li>
+          <li>Elaboraci&#243;n de informes diarios de recaudaci&#243;n.</li>
+          <li>Apoyo administrativo general.</li>
+          <li>En caso necesario, podr&#225; prestar apoyo en terreno.</li>
+        </ul>
+      </div>
+      <div class="rrhh-card reveal">
+        <div class="rrhh-card-header rrhh-inspector">
+          <span class="rrhh-badge">8</span>
+          <div class="rrhh-icon">&#x1F3EA;</div>
+          <div>
+            <h4>Inspector Recaudador de Comercio</h4>
+            <p>Fiscalizaci&#243;n y recaudaci&#243;n comercial</p>
+          </div>
+        </div>
+        <ul class="rrhh-funcs">
+          <li>Fiscalizar el comercio autorizado en casas, locales y ferias.</li>
+          <li>Recaudar los derechos municipales establecidos en la Ordenanza.</li>
+          <li>Mantener el orden en el sector asignado.</li>
+          <li>Registrar las recaudaciones realizadas.</li>
+          <li>Informar cualquier situaci&#243;n irregular detectada.</li>
+        </ul>
+        <div class="rrhh-nota">
+          <strong>Trabajo en parejas</strong> por sector con radios port&#225;tiles.
+          Equipo exclusivo Feria Comercial La Tirana:
+          <span class="rrhh-stat">597 puestos</span> comerciales &middot;
+          <span class="rrhh-stat">193 puestos</span> sector Circunvalaci&#243;n.
+        </div>
+      </div>
+      <div class="rrhh-card reveal">
+        <div class="rrhh-card-header rrhh-inspector">
+          <span class="rrhh-badge">4</span>
+          <div class="rrhh-icon">&#x267B;&#xFE0F;</div>
+          <div>
+            <h4>Inspector Recaudador Aseo Domiciliario</h4>
+            <p>Gesti&#243;n de residuos domiciliarios</p>
+          </div>
+        </div>
+        <ul class="rrhh-funcs">
+          <li>Recaudar el derecho municipal de extracci&#243;n de residuos domiciliarios.</li>
+          <li>Informar sobre situaciones relacionadas con acumulaci&#243;n de basura.</li>
+          <li>Coordinar acciones con el Programa de residuos.</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
