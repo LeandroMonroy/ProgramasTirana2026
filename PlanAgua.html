@@ -258,6 +258,36 @@
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  function trimWhite(img) {
+    if (img.dataset.trimmed) return;
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    c.width = img.naturalWidth; c.height = img.naturalHeight;
+    ctx.drawImage(img, 0, 0);
+    try {
+      const { data, width, height } = ctx.getImageData(0, 0, c.width, c.height);
+      const T = 235;
+      const isWhite = i => data[i] > T && data[i+1] > T && data[i+2] > T;
+      let t = 0, b = height - 1, l = 0, r = width - 1;
+      while (t < height && [...Array(width)].every((_,x) => isWhite((t*width+x)*4))) t++;
+      while (b > t     && [...Array(width)].every((_,x) => isWhite((b*width+x)*4))) b--;
+      while (l < width && [...Array(height)].every((_,y) => isWhite((y*width+l)*4))) l++;
+      while (r > l     && [...Array(height)].every((_,y) => isWhite((y*width+r)*4))) r--;
+      const pad = 6;
+      t = Math.max(0, t-pad); b = Math.min(height-1, b+pad);
+      l = Math.max(0, l-pad); r = Math.min(width-1,  r+pad);
+      const out = document.createElement('canvas');
+      out.width = r-l+1; out.height = b-t+1;
+      out.getContext('2d').drawImage(c, l, t, out.width, out.height, 0, 0, out.width, out.height);
+      img.dataset.trimmed = '1';
+      img.src = out.toDataURL('image/png');
+    } catch(e) {}
+  }
+
+  document.querySelectorAll('.apoyo-logo').forEach(img => {
+    img.complete ? trimWhite(img) : img.addEventListener('load', () => trimWhite(img), { once: true });
+  });
 </script>
 </body>
 </html>
