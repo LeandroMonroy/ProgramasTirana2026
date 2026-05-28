@@ -67,6 +67,22 @@
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity .55s ease, transform .55s ease; }
   .reveal.visible { opacity: 1; transform: none; }
 
+  /* OBJETIVOS */
+  .obj-general { background: linear-gradient(135deg, var(--azul-oscuro), #0b2247); border-radius: 16px; padding: 2rem 2.5rem; color: var(--blanco); margin-bottom: 2.5rem; border-left: 5px solid var(--dorado); }
+  .obj-general h3 { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; text-transform: uppercase; color: var(--dorado); margin-bottom: 0.8rem; letter-spacing: 0.06em; }
+  .obj-general p { font-size: 1.05rem; line-height: 1.78; color: rgba(255,255,255,0.88); }
+  .obj-metrics { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+  .metric-card { background: var(--blanco); border-radius: 16px; padding: 2.2rem 1.5rem; text-align: center; box-shadow: 0 4px 20px var(--sombra); position: relative; overflow: hidden; }
+  .metric-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+  .metric-potable::before { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul-claro)); }
+  .metric-riego::before { background: linear-gradient(90deg, var(--dorado-oscuro), var(--dorado)); }
+  .metric-icon { font-size: 2.4rem; margin-bottom: 1rem; }
+  .metric-num { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(3rem, 6vw, 4.2rem); font-weight: 900; color: var(--azul-oscuro); line-height: 1; }
+  .metric-unit { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; color: var(--dorado); text-transform: uppercase; letter-spacing: 0.12em; margin: 0.3rem 0 0.8rem; }
+  .metric-desc { font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--azul); }
+  .metric-sub { font-size: 0.8rem; color: #6a8098; margin-top: 0.3rem; }
+  @media (max-width: 768px) { .obj-metrics { grid-template-columns: 1fr; } }
+
   /* FOOTER */
   footer { background: var(--texto-oscuro); border-top: 3px solid var(--dorado); padding: 2.5rem 2rem; text-align: center; }
   footer img { height: 36px; object-fit: contain; opacity: 0.9; margin: 0 0.8rem; mix-blend-mode: screen; }
@@ -103,6 +119,36 @@
     <div class="hero-stat"><div class="num">11</div><div class="label">D&#237;as de operaci&#243;n</div></div>
     <div class="hero-stat"><div class="num">—</div><div class="label">Puntos de distribuci&#243;n</div></div>
     <div class="hero-stat"><div class="num">—</div><div class="label">Funcionarios</div></div>
+  </div>
+</section>
+
+<!-- OBJETIVOS -->
+<section id="objetivos">
+  <div class="container">
+    <div class="section-tag">Mis&#243;n del Plan</div>
+    <h2 class="section-title">Objetivo del <span>Programa</span></h2>
+
+    <div class="obj-general reveal">
+      <h3>&#x1F3AF; Objetivo General</h3>
+      <p>Apoyar el abastecimiento de agua potable y de regad&#237;o durante el periodo de festividad, considerando el aumento de poblaci&#243;n flotante y la alta demanda de los servicios b&#225;sicos en el poblado de La Tirana.</p>
+    </div>
+
+    <div class="obj-metrics">
+      <div class="metric-card metric-potable reveal">
+        <div class="metric-icon">&#x1F4A7;</div>
+        <div class="metric-num">8</div>
+        <div class="metric-unit">Millones de litros</div>
+        <div class="metric-desc">Agua Potable</div>
+        <div class="metric-sub">Proyecci&#243;n de entrega durante la festividad</div>
+      </div>
+      <div class="metric-card metric-riego reveal">
+        <div class="metric-icon">&#x1F331;</div>
+        <div class="metric-num">2</div>
+        <div class="metric-unit">Millones de litros</div>
+        <div class="metric-desc">Agua de Regad&#237;o</div>
+        <div class="metric-sub">Proyecci&#243;n de entrega durante la festividad</div>
+      </div>
+    </div>
   </div>
 </section>
 
