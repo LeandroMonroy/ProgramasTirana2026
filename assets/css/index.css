@@ -205,26 +205,6 @@
   .prog-btn:hover { background: var(--azul-claro); transform: translateX(3px); }
   .prog-btn::after { content: '→'; }
 
-  /* ── FEATURED CARD (Seguridad) ── */
-  .prog-card--featured {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    max-height: 260px;
-  }
-  .prog-card--featured .prog-card-header {
-    width: 40%; flex-shrink: 0;
-    padding: 2.5rem 2rem;
-    display: flex; flex-direction: column; justify-content: center;
-  }
-  .prog-card--featured .prog-card-header::after {
-    bottom: 0; top: 0; right: -1px; left: auto;
-    width: 28px; height: 100%;
-    clip-path: ellipse(100% 55% at 100% 50%);
-  }
-  .prog-card--featured .prog-card-body {
-    padding: 2rem 2.2rem;
-  }
-  .prog-card--featured h3 { font-size: 1.6rem; }
 
   /* ── STATS BAR ── */
   .stats-bar {
