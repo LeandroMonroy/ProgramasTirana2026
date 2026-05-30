@@ -263,6 +263,12 @@
    PLAN EMERGENCIA — CUSTOM STYLES
    ════════════════════════════════════════ */
 
+/* Subtítulo ctt (reutilizado de PlanSeguridad/PlanAgua) */
+.compras-table-title { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.2rem; }
+.ctt-bar { flex: 1; height: 3px; background: linear-gradient(90deg, transparent, var(--azul)); border-radius: 2px; }
+.ctt-bar:last-child { background: linear-gradient(90deg, var(--azul), transparent); }
+.ctt-heading { font-family: 'Barlow Condensed', sans-serif; font-size: 1.25rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--azul-oscuro); white-space: nowrap; padding: 0.4rem 1rem; border: 2px solid var(--azul); border-radius: 8px; background: rgba(27,79,138,0.05); }
+
 /* Hero: dark emergency gradient (overrides plan-rentas hero image) */
 .hero {
   min-height: 100vh;
