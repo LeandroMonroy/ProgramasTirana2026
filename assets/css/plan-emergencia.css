@@ -263,6 +263,24 @@
    PLAN EMERGENCIA — CUSTOM STYLES
    ════════════════════════════════════════ */
 
+/* ── Alternancia de fondos de sección (patrón PlanSeguridad) ── */
+#objetivo    { background: var(--blanco); }
+#presencia   { background: var(--azul-oscuro); }
+#senaletica  { background: var(--gris-claro, #f4f7fc); }
+#equipamiento{ background: var(--azul-oscuro); }
+#material    { background: var(--blanco); }
+#compras     { background: var(--gris-claro, #f4f7fc); }
+
+/* Texto en secciones oscuras */
+#presencia .section-title,
+#equipamiento .section-title { color: var(--blanco); }
+
+#presencia .section-desc,
+#equipamiento .section-desc { color: var(--gris-med); }
+
+/* Anular la regla nth-child de plan-rentas heredada */
+section:nth-child(even):not(.hero) { background: unset; }
+
 /* Subtítulo ctt (reutilizado de PlanSeguridad/PlanAgua) */
 .compras-table-title { display: flex; align-items: center; gap: 1.2rem; margin-bottom: 1.2rem; }
 .ctt-bar { flex: 1; height: 3px; background: linear-gradient(90deg, transparent, var(--azul)); border-radius: 2px; }
