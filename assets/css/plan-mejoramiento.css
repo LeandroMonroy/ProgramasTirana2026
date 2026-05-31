@@ -291,8 +291,9 @@
 .obj-num {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 3rem; font-weight: 900;
-  color: rgba(27,79,138,0.08); line-height: 1;
+  color: var(--azul-oscuro); line-height: 1;
   margin-bottom: 0.6rem;
+  opacity: 0.35;
 }
 .obj-card p { font-size: 0.92rem; color: #4a6080; line-height: 1.65; }
 
@@ -334,3 +335,20 @@
   .obj-grid { grid-template-columns: 1fr; }
   .proyecto-stats { grid-template-columns: 1fr; }
 }
+
+
+/* ── Alternancia de fondos (patrón PlanSeguridad) ── */
+section:nth-child(even):not(.hero) { background: unset; }
+#objetivos      { background: var(--blanco); }
+#consistorial   { background: #f4f7fc; }
+#casetas        { background: var(--azul-oscuro); }
+#casetas .section-title { color: var(--blanco); }
+#casetas .section-desc  { color: var(--gris-med); }
+#multicancha    { background: #f4f7fc; }
+#plaza          { background: var(--blanco); }
+#estadio        { background: #f4f7fc; }
+#salon          { background: var(--azul-oscuro); }
+#salon .section-title { color: var(--blanco); }
+#salon .section-desc  { color: var(--gris-med); }
+#aguacaliente   { background: #f4f7fc; }
+#sombreadero    { background: var(--blanco); }
