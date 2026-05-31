@@ -412,3 +412,10 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .mapa-leaflet { height: 480px; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 32px var(--sombra); border: 2px solid var(--gris-med); }
 .dst-pin { width: 36px; height: 36px; background: var(--azul-oscuro); border-radius: 50% 50% 50% 0; transform: rotate(-45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(0,0,0,0.3); border: 2px solid var(--dorado); }
 .dst-pin span, .dst-pin { font-size: 16px; }
+
+/* ===== RECURSO HUMANO ===== */
+#rrhh { background: var(--gris-claro); }
+.rrhh-th-cargo { text-align: left; padding-left: 1.2rem !important; border-radius: 14px 0 0 0; }
+.dot-table-tfoot-total { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)) !important; }
+.dot-tfoot-total { padding: 1rem 1rem; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--dorado); white-space: nowrap; }
+.rrhh-nota { margin-top: 0.9rem; font-size: 0.8rem; color: #8a9db5; font-style: italic; }
