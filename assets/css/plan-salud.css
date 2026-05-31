@@ -419,3 +419,31 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .dot-table-tfoot-total { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)) !important; }
 .dot-tfoot-total { padding: 1rem 1rem; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--dorado); white-space: nowrap; }
 .rrhh-nota { margin-top: 0.9rem; font-size: 0.8rem; color: #8a9db5; font-style: italic; }
+
+/* ===== PLAN DE COMPRAS (mismo diseño PlanRentas) ===== */
+#compras { background: var(--blanco); }
+
+.compras-table-wrap { overflow-x: auto; border-radius: 16px; box-shadow: 0 6px 32px rgba(27,79,138,0.10); border: 1.5px solid var(--gris-med); }
+.compras-table { width: 100%; border-collapse: collapse; font-size: 0.93rem; min-width: 600px; }
+.compras-table thead tr { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)); }
+.compras-table thead th { font-family: "Barlow Condensed", sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blanco); padding: 1rem 1.1rem; text-align: left; }
+.compras-table thead th:first-child { border-radius: 14px 0 0 0; }
+.compras-table thead th:last-child { border-radius: 0 14px 0 0; text-align: right; }
+
+.compras-table tbody tr { border-bottom: 1px solid rgba(27,79,138,0.07); transition: background .18s; }
+.compras-table tbody tr:nth-child(odd)  { background: var(--blanco); }
+.compras-table tbody tr:nth-child(even) { background: #f4f7fc; }
+.compras-table tbody tr:hover { background: #e8f0fb; }
+.compras-table tbody td { padding: 0.85rem 1.1rem; color: var(--texto-oscuro); vertical-align: middle; line-height: 1.4; }
+.compras-table tbody tr:hover td:first-child { border-left: 4px solid var(--dorado); }
+
+.compras-separator td { padding: 0.3rem 0 !important; background: var(--gris-claro) !important; border-bottom: 2px solid var(--gris-med) !important; }
+
+.td-cant { font-family: "Barlow Condensed", sans-serif; font-size: 1.2rem; font-weight: 900; color: var(--azul); text-align: center; }
+.td-item { font-weight: 600; color: var(--texto-oscuro); }
+.td-val   { text-align: right; font-weight: 600; color: #3a5070; white-space: nowrap; }
+.td-total { text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--azul); white-space: nowrap; }
+
+.compras-table tfoot tr { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)); }
+.td-total-label { font-family: "Barlow Condensed", sans-serif; font-size: 1rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blanco); padding: 1rem 1.1rem; border-radius: 0 0 0 14px; }
+.td-total-sum   { font-family: "Barlow Condensed", sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--dorado); padding: 1rem 1.1rem; text-align: right; border-radius: 0 0 14px 0; }
