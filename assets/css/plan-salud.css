@@ -368,3 +368,47 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 @media (max-width: 900px) {
   .inn-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== MODELO OPERATIVO POR FASES ===== */
+#modelo { background: var(--gris-claro); }
+
+.fases-wrap { border-radius: 14px; overflow: hidden; box-shadow: 0 6px 32px var(--sombra); }
+
+.fases-header { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)); color: var(--blanco); font-family: "Barlow Condensed", sans-serif; font-size: 1.05rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; text-align: center; padding: 1rem 1.5rem; border-bottom: 3px solid var(--dorado); }
+
+.fases-grid { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid rgba(27,79,138,0.12); }
+
+.fase-col { display: flex; flex-direction: column; }
+.fase-col:first-child { border-right: 1px solid rgba(27,79,138,0.12); }
+
+.fase-title { display: flex; align-items: center; gap: 0.7rem; padding: 0.75rem 1.2rem; font-family: "Barlow Condensed", sans-serif; font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; }
+.fase-title--1 { background: var(--azul); color: var(--blanco); }
+.fase-title--2 { background: var(--dorado); color: var(--texto-oscuro); }
+
+.fase-badge { font-family: "Barlow Condensed", sans-serif; font-size: 0.72rem; font-weight: 900; letter-spacing: 0.12em; background: rgba(255,255,255,0.25); padding: 0.2rem 0.55rem; border-radius: 4px; white-space: nowrap; }
+.fase-badge--2 { background: rgba(10,31,58,0.18); }
+.fase-fecha { opacity: 0.85; font-weight: 600; }
+.fase-fecha--2 { opacity: 0.8; }
+
+.fase-items { list-style: none; flex: 1; background: var(--blanco); }
+.fase-items li { padding: 0.7rem 1.2rem; border-bottom: 1px solid rgba(27,79,138,0.07); font-size: 0.88rem; color: #3a5070; line-height: 1.5; }
+.fase-items li:last-child { border-bottom: none; }
+.fase-items--2 { background: #fffdf4; }
+.fase-items--2 li { color: #4a3000; border-bottom-color: rgba(245,168,0,0.12); }
+
+.post-fest-header { background: linear-gradient(90deg, var(--azul-oscuro), #1a3a5c); color: var(--blanco); font-family: "Barlow Condensed", sans-serif; font-size: 0.95rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; text-align: center; padding: 0.75rem 1.5rem; border-top: 3px solid var(--dorado); }
+.post-fest-items { display: grid; grid-template-columns: 1fr 1fr; background: #f0f6f4; }
+.post-fest-item { padding: 0.8rem 1.2rem; font-size: 0.88rem; color: #2a4a40; border-right: 1px solid rgba(13,124,110,0.15); text-align: center; }
+.post-fest-item:last-child { border-right: none; }
+
+@media (max-width: 768px) {
+  .fases-grid { grid-template-columns: 1fr; }
+  .fase-col:first-child { border-right: none; border-bottom: 2px solid var(--gris-med); }
+  .post-fest-items { grid-template-columns: 1fr; }
+}
+
+/* ===== MAPA OPERATIVO ===== */
+#mapa { background: var(--blanco); }
+.mapa-leaflet { height: 480px; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 32px var(--sombra); border: 2px solid var(--gris-med); }
+.dst-pin { width: 36px; height: 36px; background: var(--azul-oscuro); border-radius: 50% 50% 50% 0; transform: rotate(-45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(0,0,0,0.3); border: 2px solid var(--dorado); }
+.dst-pin span, .dst-pin { font-size: 16px; }
