@@ -284,7 +284,7 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .ppto-pct--agl { background: var(--azul-oscuro); color: rgba(255,255,255,0.85); }
 .ppto-pct--rec { background: var(--azul-claro); color: rgba(255,255,255,0.9); }
 
-.ppto-total { display: flex; justify-content: center; }
+.ppto-total { display: flex; justify-content: center; margin-bottom: 2rem; }
 .ppto-total-inner { background: linear-gradient(135deg, var(--azul-oscuro) 0%, #1B4F8A 100%); border-radius: 20px; padding: 2.2rem 4rem; text-align: center; box-shadow: 0 8px 36px rgba(27,79,138,0.22); width: 100%; max-width: 680px; }
 .ppto-total-label { font-family: "Barlow Condensed", sans-serif; font-size: 0.88rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 0.5rem; }
 .ppto-total-val { font-family: "Barlow Condensed", sans-serif; font-size: 3.2rem; font-weight: 900; color: var(--dorado); line-height: 1; margin-bottom: 1rem; }
@@ -342,7 +342,7 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .cat-total-val { padding: 1rem 1rem; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--dorado); white-space: nowrap; }
 
 /* ===== INNOVACION DST ===== */
-#innovacion { background: var(--gris-claro); }
+#innovacion { background: var(--blanco); }
 
 .inn-subtitle { color: #6080a0; font-size: 0.95rem; margin-bottom: 2.5rem; }
 
