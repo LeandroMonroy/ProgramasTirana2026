@@ -131,7 +131,11 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .dst-dept h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.98rem; font-weight: 800; text-transform: uppercase; color: var(--azul-oscuro); margin-bottom: 0.25rem; line-height: 1.2; }
 .dst-dept p { font-size: 0.78rem; color: #6080a0; line-height: 1.45; }
 
+.dst-sub-h-line { width: 100%; height: 2px; background: linear-gradient(90deg, transparent 15%, var(--gris-med) 15%, var(--gris-med) 85%, transparent 85%); }
 .dst-sub-row { display: flex; gap: 0.7rem; width: 100%; align-items: flex-start; }
+.dst-sub-col { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 0; }
+.dst-sub-col--wide { flex: 2; }
+.dst-v-sub-tick { width: 2px; height: 16px; background: linear-gradient(180deg, var(--azul-claro), var(--gris-med)); }
 .dst-equipo-block--wide { flex: 2; min-width: 0; }
 .dst-equipo-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; background: var(--azul); color: var(--blanco); padding: 0.4rem 1rem; border-radius: 6px 6px 0 0; text-align: center; }
 .dst-roles-grid { display: flex; flex-direction: column; gap: 0.5rem; padding: 0.8rem; background: #f4f7fc; border-radius: 0 0 10px 10px; border: 1px solid var(--gris-med); border-top: none; }
