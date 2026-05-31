@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --azul:        #1B4F8A;
   --azul-oscuro: #0d3060;
   --azul-claro:  #2a6fc4;
@@ -338,5 +338,5 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .cat-sub-val { padding: 0.7rem 1rem; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--azul); white-space: nowrap; }
 
 .cat-total-row { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)) !important; border-top: 2px solid rgba(245,168,0,0.5); }
-.cat-total-label { padding: 1rem 1rem; font-family: "Barlow Condensed", sans-serif; font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blanco); text-align: right; border-radius: 0 0 0 14px; }
-.cat-total-val { padding: 1rem 1rem; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--dorado); white-space: nowrap; border-radius: 0 0 14px 0; }
+.cat-total-label { padding: 1rem 1rem; font-family: "Barlow Condensed", sans-serif; font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blanco); text-align: right; }
+.cat-total-val { padding: 1rem 1rem; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--dorado); white-space: nowrap; }
