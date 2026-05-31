@@ -793,9 +793,13 @@
     scrollWheelZoom: false
   });
 
-  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}", {
-    attribution: "Tiles &copy; Esri &mdash; Source: Esri, HERE, Garmin, USGS",
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
+    attribution: "Tiles &copy; Esri &mdash; Source: Esri, USDA, USGS, AEX, GeoEye",
     maxZoom: 19
+  }).addTo(map);
+  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", {
+    maxZoom: 19,
+    opacity: 1
   }).addTo(map);
 
   var cuadrantes = [
@@ -814,6 +818,7 @@
   });
   grupo.addTo(map);
   map.fitBounds(grupo.getBounds(), { padding: [24, 24] });
+  map.once("moveend", function(){ map.zoomIn(1); });
 
   var leyenda = L.control({ position: "bottomright" });
   leyenda.onAdd = function() {
