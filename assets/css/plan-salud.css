@@ -449,3 +449,10 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .compras-table tfoot tr { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)); }
 .td-total-label { font-family: "Barlow Condensed", sans-serif; font-size: 1rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blanco); padding: 1rem 1.1rem; border-radius: 0 0 0 14px; }
 .td-total-sum   { font-family: "Barlow Condensed", sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--dorado); padding: 1rem 1.1rem; text-align: right; border-radius: 0 0 14px 0; }
+
+/* Leyenda mapa */
+.mapa-leyenda { background: rgba(255,255,255,0.95); border-radius: 10px; padding: 0.8rem 1rem; box-shadow: 0 3px 14px rgba(0,0,0,0.2); font-family: "Barlow", sans-serif; min-width: 160px; border: 1px solid rgba(27,79,138,0.15); }
+.mapa-leyenda h4 { font-family: "Barlow Condensed", sans-serif; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: #0d3060; margin-bottom: 0.55rem; border-bottom: 2px solid #e0e8f0; padding-bottom: 0.4rem; }
+.ley-item { display: flex; align-items: center; gap: 0.55rem; font-size: 0.82rem; color: #2a3d5a; margin-bottom: 0.35rem; font-weight: 500; }
+.ley-item:last-child { margin-bottom: 0; }
+.ley-color { display: inline-block; width: 16px; height: 16px; border-radius: 4px; flex-shrink: 0; opacity: 0.85; }

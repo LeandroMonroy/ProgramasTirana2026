@@ -787,28 +787,56 @@
 <script>
 (function(){
   var map = L.map("mapa-leaflet", { zoomControl: true, scrollWheelZoom: false })
-    .setView([-20.045, -69.569], 14);
+    .setView([-20.338, -69.650], 13);
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     attribution: "&#169; OpenStreetMap contributors",
     maxZoom: 18
   }).addTo(map);
 
-  var iconDST = L.divIcon({ className: "dst-marker", html: "<div class='dst-pin'>&#x1FA7A;</div>", iconSize: [40,40], iconAnchor: [20,40] });
-
-  var puntos = [
-    { lat: -20.045,  lng: -69.569,  label: "DST Tirana – Sede Principal" },
-    { lat: -20.041,  lng: -69.574,  label: "Punto Móvil Norte – Feria" },
-    { lat: -20.050,  lng: -69.566,  label: "Punto Móvil Sur – Residencial" },
-    { lat: -20.047,  lng: -69.560,  label: "Farmacia Comunal Móvil" },
-    { lat: -20.038,  lng: -69.571,  label: "Puesto Campamentos" }
+  var cuadrantes = [
+    {
+      nombre: "Cuadrante NO",
+      color: "#1B4F8A",
+      coords: [[-20.3379871,-69.6566282],[-20.3378262,-69.6520577],[-20.337625,-69.651929],[-20.3378664,-69.6496974],[-20.3378664,-69.6446977],[-20.3222123,-69.6450411],[-20.3223531,-69.6571861],[-20.3379871,-69.6566282]]
+    },
+    {
+      nombre: "Cuadrante NP",
+      color: "#0d7c6e",
+      coords: [[-20.3223531,-69.6571861],[-20.3227153,-69.6664129],[-20.3378463,-69.66637],[-20.3377256,-69.6592246],[-20.338128,-69.6590744],[-20.3379871,-69.6566282],[-20.3223531,-69.6571861]]
+    },
+    {
+      nombre: "Cuadrante SP",
+      color: "#c0392b",
+      coords: [[-20.3379871,-69.6566282],[-20.338128,-69.6590744],[-20.3377256,-69.6592246],[-20.3378463,-69.66637],[-20.3490415,-69.6661869],[-20.3547752,-69.6559945],[-20.3545338,-69.6553937],[-20.3515764,-69.6562734],[-20.3379871,-69.6566282]]
+    },
+    {
+      nombre: "Cuadrante SO",
+      color: "#F5A800",
+      coords: [[-20.3379871,-69.6566282],[-20.3515764,-69.6562734],[-20.3552178,-69.655222],[-20.3568071,-69.6522179],[-20.3559219,-69.6518746],[-20.3529445,-69.6523896],[-20.352522,-69.6522823],[-20.3524616,-69.6335283],[-20.3408531,-69.633421],[-20.3407525,-69.6446219],[-20.3378664,-69.6446977],[-20.3378664,-69.6496974],[-20.3375937,-69.6517673],[-20.3379536,-69.6521061],[-20.3379871,-69.6566282]]
+    }
   ];
 
-  puntos.forEach(function(p) {
-    L.marker([p.lat, p.lng], { icon: iconDST })
-      .addTo(map)
-      .bindPopup("<strong>" + p.label + "</strong>");
+  cuadrantes.forEach(function(c) {
+    L.polygon(c.coords, {
+      color: c.color,
+      weight: 2,
+      fillColor: c.color,
+      fillOpacity: 0.25
+    }).addTo(map).bindPopup("<strong>" + c.nombre + "</strong>");
   });
+
+  // Leyenda
+  var leyenda = L.control({ position: "bottomright" });
+  leyenda.onAdd = function() {
+    var d = L.DomUtil.create("div", "mapa-leyenda");
+    d.innerHTML = "<h4>Cuadrantes DST</h4>";
+    cuadrantes.forEach(function(c) {
+      d.innerHTML += "<div class=\\"ley-item\\"><span class=\\"ley-color\\" style=\\"background:" + c.color + "\\"></span>" + c.nombre + "</div>";
+    });
+    return d;
+  };
+  leyenda.addTo(map);
 })();
 </script>
 <script src="assets/js/plan-salud.js"></script>
