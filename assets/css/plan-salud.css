@@ -208,8 +208,17 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .dst-level2 { grid-template-columns: repeat(2, 1fr); }
-  .dst-equipos-section { width: 90%; }
+  /* Organigrama: 2 columnas en tablet */
+  .dst-level2 { flex-wrap: wrap; }
+  .dst-dept-col { flex: 1 1 calc(50% - 0.6rem); }
+  .dst-dept-col--main { flex: 1 1 calc(50% - 0.6rem); }
+  .dst-h-connector { display: none; }
+  .dst-v-line-center { display: none; }
+  .dst-sub-row { flex-direction: column; align-items: center; }
+  .dst-sub-col, .dst-sub-col--wide { width: 100%; flex: unset; }
+  .dst-roles-2col { grid-template-columns: 1fr 1fr; }
+  .dst-role-card { white-space: normal; }
+  /* AGL stats */
   .agl-stats-grid { grid-template-columns: repeat(2, 1fr); }
   .nav-links { display: none; }
 }
@@ -217,17 +226,30 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
   nav { padding: 0 1.2rem; }
   .hero { padding: 100px 1.2rem 60px; }
   .hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); }
-  .dst-level2 { grid-template-columns: 1fr 1fr; }
-  .dst-equipos-section { grid-template-columns: 1fr; width: 100%; }
-  .dst-subcargos { flex-direction: column; align-items: center; gap: 1rem; }
+  section { padding: 60px 1.2rem; min-height: unset; }
+  /* Organigrama: columna única en móvil */
   .dst-top-row { flex-direction: column; align-items: center; gap: 1rem; }
   .dst-top-connector { display: none; }
+  .dst-director { max-width: 100%; }
+  .dst-level2 { flex-direction: column; align-items: stretch; gap: 0.8rem; }
+  .dst-dept-col, .dst-dept-col--main { flex: unset; width: 100%; }
+  .dst-h-connector { display: none; }
+  .dst-v-line-center { display: none; }
+  .dst-v-tick { height: 14px; }
+  .dst-v-sub { height: 14px; }
+  .dst-sub-h-line { display: none; }
+  .dst-v-sub-tick { display: none; }
+  .dst-sub-row { flex-direction: column; align-items: stretch; gap: 0.6rem; }
+  .dst-sub-col, .dst-sub-col--wide { flex: unset; width: 100%; }
+  .dst-equipo-block--wide { flex: unset; width: 100%; }
+  .dst-roles-2col { grid-template-columns: 1fr; }
+  .dst-role-card { white-space: normal; }
+  /* AGL stats */
   .agl-stats-grid { grid-template-columns: 1fr 1fr; }
-  section { padding: 60px 1.2rem; min-height: unset; }
 }
 @media (max-width: 500px) {
-  .dst-level2 { grid-template-columns: 1fr; }
   .agl-stats-grid { grid-template-columns: 1fr; }
+  .dst-roles-2col { grid-template-columns: 1fr; }
 }
 
 /* ===== DOTACION ===== */
