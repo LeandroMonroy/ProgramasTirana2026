@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --azul:        #1B4F8A;
   --azul-oscuro: #0d3060;
   --azul-claro:  #2a6fc4;
@@ -63,10 +63,10 @@ section > .container { width: 100%; }
 
 /* ALTERNATING SECTION BACKGROUNDS */
 #organigrama { background: var(--blanco); }
-#agl { background: var(--gris-claro); }
+#organigrama { background: var(--blanco); }
+#agl { background: linear-gradient(135deg, var(--texto-oscuro) 0%, var(--azul-oscuro) 100%); position: relative; overflow: hidden; }
 #organigrama .section-title { color: var(--texto-oscuro); }
-#agl .section-title { color: var(--texto-oscuro); }
-
+#agl .section-title { color: var(--blanco); }
 /* FOOTER */
 footer { background: var(--texto-oscuro); border-top: 3px solid var(--dorado); padding: 2.5rem 2rem; text-align: center; }
 footer img { height: 36px; object-fit: contain; opacity: 0.9; margin: 0 0.8rem; mix-blend-mode: screen; }
@@ -231,7 +231,7 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 }
 
 /* ===== DOTACION ===== */
-#dotacion { background: var(--blanco); }
+#dotacion { background: var(--gris-claro); }
 
 .dot-table-wrap { overflow-x: auto; border-radius: 16px; box-shadow: 0 6px 32px var(--sombra); border: 1.5px solid var(--gris-med); }
 .dot-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 700px; background: var(--blanco); }
@@ -260,7 +260,7 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .dot-tfoot-total { padding: 1rem 1rem; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.35rem; font-weight: 900; color: var(--dorado); white-space: nowrap; }
 
 /* ===== PRESUPUESTO DST ===== */
-#presupuesto { background: var(--gris-claro); }
+#presupuesto { background: linear-gradient(135deg, var(--azul-oscuro) 0%, #0d2555 100%); position: relative; overflow: hidden; }
 
 .ppto-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.8rem; margin-bottom: 2rem; }
 
@@ -298,3 +298,11 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
   .ppto-total-inner { padding: 1.8rem 2rem; }
   .ppto-total-val { font-size: 2.4rem; }
 }
+
+/* Overrides texto para secciones oscuras */
+#agl .section-desc  { color: var(--gris-med); }
+#agl .agl-banner    { background: rgba(255,255,255,0.06); border-left-color: var(--azul-claro); }
+
+#presupuesto .section-title { color: var(--blanco); }
+#presupuesto .section-desc  { color: var(--gris-med); }
+#presupuesto .ppto-total-inner { background: rgba(255,255,255,0.08); border: 1.5px solid rgba(245,168,0,0.35); box-shadow: 0 8px 36px rgba(0,0,0,0.3); }
