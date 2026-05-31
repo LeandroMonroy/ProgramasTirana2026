@@ -440,7 +440,9 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .compras-separator td { padding: 0.3rem 0 !important; background: var(--gris-claro) !important; border-bottom: 2px solid var(--gris-med) !important; }
 
 .td-cant { font-family: "Barlow Condensed", sans-serif; font-size: 1.2rem; font-weight: 900; color: var(--azul); text-align: center; }
-.td-item { font-weight: 600; color: var(--texto-oscuro); }
+.td-item { font-family: "Barlow Condensed", sans-serif; font-size: 1rem; font-weight: 700; color: var(--azul-oscuro); text-transform: uppercase; }
+.item-icon { margin-right: 0.5rem; font-size: 1.3rem; }
+.item-name { vertical-align: middle; }
 .td-val   { text-align: right; font-weight: 600; color: #3a5070; white-space: nowrap; }
 .td-total { text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--azul); white-space: nowrap; }
 
