@@ -119,9 +119,11 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .dst-v-line-center { width: 2px; height: 36px; background: linear-gradient(180deg, var(--verde-claro), var(--gris-med)); }
 .dst-h-connector { width: 100%; height: 2px; background: linear-gradient(90deg, transparent 5%, var(--gris-med) 5%, var(--gris-med) 95%, transparent 95%); }
 
-.dst-level2 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; width: 100%; margin-bottom: 0.5rem; }
-.dst-dept-wrap { display: flex; flex-direction: column; align-items: center; }
+.dst-level2 { display: flex; gap: 1.2rem; width: 100%; align-items: flex-start; }
+.dst-dept-col { display: flex; flex-direction: column; align-items: center; flex: 1; min-width: 0; }
+.dst-dept-col--main { flex: 2.2; }
 .dst-v-tick { width: 2px; height: 28px; background: linear-gradient(180deg, var(--gris-med), var(--azul-claro)); }
+.dst-v-sub { width: 2px; height: 24px; background: linear-gradient(180deg, var(--verde-dst), var(--verde-claro)); margin: 0 auto; }
 .dst-dept { background: var(--blanco); border-radius: 14px; padding: 1.2rem 1rem; text-align: center; box-shadow: 0 4px 18px var(--sombra); border-top: 3px solid var(--azul-claro); width: 100%; transition: transform 0.2s, box-shadow 0.2s; }
 .dst-dept:hover { transform: translateY(-4px); box-shadow: 0 10px 32px rgba(27,79,138,0.13); }
 .dst-dept--main { border-top-color: var(--verde-dst); }
@@ -129,7 +131,7 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .dst-dept h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.98rem; font-weight: 800; text-transform: uppercase; color: var(--azul-oscuro); margin-bottom: 0.25rem; line-height: 1.2; }
 .dst-dept p { font-size: 0.78rem; color: #6080a0; line-height: 1.45; }
 
-.dst-equipos-section { display: flex; gap: 1rem; width: 55%; margin-top: 1.8rem; align-items: flex-start; }
+.dst-sub-row { display: flex; gap: 0.7rem; width: 100%; align-items: flex-start; }
 .dst-equipo-block--wide { flex: 2; min-width: 0; }
 .dst-equipo-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; background: var(--verde-dst); color: var(--blanco); padding: 0.4rem 1rem; border-radius: 6px 6px 0 0; text-align: center; }
 .dst-roles-grid { display: flex; flex-direction: column; gap: 0.5rem; padding: 0.8rem; background: #f4f7fc; border-radius: 0 0 10px 10px; border: 1px solid var(--gris-med); border-top: none; }
@@ -137,13 +139,10 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .dst-roles-col { display: flex; flex-direction: column; gap: 0.4rem; }
 .dst-role-card { background: var(--blanco); border-radius: 5px; padding: 0.45rem 0.65rem; font-size: 0.78rem; color: var(--texto-oscuro); border-left: 3px solid var(--verde-claro); box-shadow: 0 1px 5px rgba(0,0,0,0.06); white-space: nowrap; }
 
-.dst-subcargos { display: flex; gap: 5rem; margin-top: 2rem; justify-content: center; }
-.dst-subcargo-block { text-align: center; }
-.dst-sub-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8a9db5; margin-bottom: 0.5rem; }
-.dst-subcargo-card { background: var(--blanco); border-radius: 12px; padding: 1.1rem 1.4rem; text-align: center; box-shadow: 0 4px 18px var(--sombra); border-top: 3px solid var(--dorado); min-width: 180px; transition: transform 0.2s; }
-.dst-subcargo-card:hover { transform: translateY(-4px); }
-.dst-subcargo-card h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 800; text-transform: uppercase; color: var(--azul-oscuro); margin: 0.3rem 0 0.2rem; }
-.dst-subcargo-card p { font-size: 0.78rem; color: #6080a0; }
+.dst-subcargo-card { background: var(--blanco); border-radius: 10px; padding: 0.9rem 1rem; text-align: center; box-shadow: 0 4px 18px var(--sombra); border-top: 3px solid var(--dorado); width: 100%; transition: transform 0.2s; }
+.dst-subcargo-card:hover { transform: translateY(-3px); }
+.dst-subcargo-card h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 800; text-transform: uppercase; color: var(--azul-oscuro); margin: 0.25rem 0 0.2rem; }
+.dst-subcargo-card p { font-size: 0.75rem; color: #6080a0; }
 
 /* ===== AGL PRESUPUESTO ===== */
 .agl-banner {
