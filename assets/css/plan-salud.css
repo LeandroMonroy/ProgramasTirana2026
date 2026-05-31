@@ -298,3 +298,45 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
   .ppto-total-inner { padding: 1.8rem 2rem; }
   .ppto-total-val { font-size: 2.4rem; }
 }
+
+/* ===== CATASTRO PRESUPUESTO ===== */
+#catastro { background: var(--blanco); }
+
+.cat-table-wrap { overflow-x: auto; border-radius: 16px; box-shadow: 0 6px 32px var(--sombra); border: 1.5px solid var(--gris-med); }
+.cat-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; min-width: 760px; background: var(--blanco); }
+
+.cat-table thead tr { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)); }
+.cat-table thead th { font-family: "Barlow Condensed", sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--blanco); padding: 0.9rem 1rem; text-align: center; white-space: nowrap; }
+.cat-th-n    { width: 42px; border-radius: 14px 0 0 0; }
+.cat-th-item { text-align: left; width: auto; }
+.cat-th-cant { width: 60px; }
+.cat-th-val  { width: 120px; }
+.cat-th-total { width: 120px; }
+.cat-th-fin  { width: 200px; border-radius: 0 14px 0 0; }
+
+.cat-table tbody tr { border-bottom: 1px solid rgba(27,79,138,0.06); transition: background .15s; }
+.cat-table tbody tr:nth-child(odd)  { background: var(--blanco); }
+.cat-table tbody tr:nth-child(even) { background: #f4f9f4; }
+.cat-table tbody tr:hover { background: #e8f0fb; }
+
+.cat-row--agl  { background: rgba(245,168,0,0.05) !important; }
+.cat-row--mixed { background: rgba(124,58,237,0.05) !important; }
+
+.cat-n    { padding: 0.7rem 0.8rem; text-align: center; font-family: "Barlow Condensed", sans-serif; font-weight: 800; font-size: 0.95rem; color: var(--azul-oscuro); }
+.cat-item { padding: 0.7rem 1rem; color: var(--texto-oscuro); font-weight: 500; }
+.cat-cant { padding: 0.7rem 0.8rem; text-align: center; font-family: "Barlow Condensed", sans-serif; font-weight: 700; color: #3a5070; }
+.cat-val  { padding: 0.7rem 1rem; text-align: right; color: #6080a0; white-space: nowrap; }
+.cat-total { padding: 0.7rem 1rem; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 0.98rem; font-weight: 800; color: var(--azul); white-space: nowrap; }
+.cat-fin  { padding: 0.7rem 1rem; font-size: 0.82rem; font-style: italic; white-space: nowrap; }
+.cat-fin--rec { color: #2d7a4f; }
+.cat-fin--agl { color: var(--azul); font-style: normal; font-weight: 700; }
+.cat-fin--mix { color: #7c3aed; font-style: normal; font-weight: 700; }
+
+.cat-sub { background: #e8eef7 !important; border-top: 2px solid var(--gris-med); }
+.cat-sub--agl { background: rgba(245,168,0,0.1) !important; }
+.cat-sub-label { padding: 0.7rem 1rem; font-family: "Barlow Condensed", sans-serif; font-size: 0.9rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--azul-oscuro); text-align: right; }
+.cat-sub-val { padding: 0.7rem 1rem; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--azul); white-space: nowrap; }
+
+.cat-total-row { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)) !important; border-top: 2px solid rgba(245,168,0,0.5); }
+.cat-total-label { padding: 1rem 1rem; font-family: "Barlow Condensed", sans-serif; font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blanco); text-align: right; border-radius: 0 0 0 14px; }
+.cat-total-val { padding: 1rem 1rem; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--dorado); white-space: nowrap; border-radius: 0 0 14px 0; }
