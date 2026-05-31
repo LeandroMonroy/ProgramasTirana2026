@@ -340,3 +340,31 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .cat-total-row { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)) !important; border-top: 2px solid rgba(245,168,0,0.5); }
 .cat-total-label { padding: 1rem 1rem; font-family: "Barlow Condensed", sans-serif; font-size: 1rem; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blanco); text-align: right; }
 .cat-total-val { padding: 1rem 1rem; text-align: right; font-family: "Barlow Condensed", sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--dorado); white-space: nowrap; }
+
+/* ===== INNOVACION DST ===== */
+#innovacion { background: var(--gris-claro); }
+
+.inn-subtitle { color: #6080a0; font-size: 0.95rem; margin-bottom: 2.5rem; }
+
+.inn-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 2rem; align-items: start; }
+
+.inn-left { display: flex; flex-direction: column; gap: 1.4rem; }
+
+.inn-box { background: var(--blanco); border-radius: 14px; overflow: hidden; box-shadow: 0 4px 20px var(--sombra); }
+.inn-box-header { background: linear-gradient(135deg, var(--azul-oscuro), var(--azul)); color: var(--blanco); font-family: "Barlow Condensed", sans-serif; font-size: 0.9rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.75rem 1.3rem; }
+.inn-box--obj .inn-box-header { background: linear-gradient(135deg, #0a3d35, var(--azul-oscuro)); }
+.inn-box-body { padding: 1.2rem 1.3rem; }
+.inn-box-body p { font-size: 0.9rem; color: #4a6080; line-height: 1.75; }
+
+.inn-right { background: var(--blanco); border-radius: 14px; box-shadow: 0 4px 20px var(--sombra); overflow: hidden; }
+.inn-obj-title { background: linear-gradient(135deg, var(--azul-oscuro), var(--azul)); color: var(--blanco); font-family: "Barlow Condensed", sans-serif; font-size: 0.9rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.75rem 1.3rem; }
+.inn-obj-list { padding: 0.6rem 0; }
+.inn-obj-item { display: flex; align-items: center; gap: 1rem; padding: 0.7rem 1.3rem; border-bottom: 1px solid rgba(27,79,138,0.07); transition: background .15s; }
+.inn-obj-item:last-child { border-bottom: none; }
+.inn-obj-item:hover { background: #f4f7fc; }
+.inn-obj-num { font-family: "Barlow Condensed", sans-serif; font-size: 1.2rem; font-weight: 900; color: var(--blanco); background: var(--azul); min-width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.inn-obj-item p { font-size: 0.9rem; color: var(--texto-oscuro); font-weight: 500; line-height: 1.4; }
+
+@media (max-width: 900px) {
+  .inn-grid { grid-template-columns: 1fr; }
+}
