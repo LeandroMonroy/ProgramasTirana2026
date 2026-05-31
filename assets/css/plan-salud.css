@@ -409,7 +409,7 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 
 /* ===== MAPA OPERATIVO ===== */
 #mapa { background: var(--blanco); }
-.mapa-leaflet { height: 480px; border-radius: 14px; overflow: hidden; box-shadow: 0 6px 32px var(--sombra); border: 2px solid var(--gris-med); }
+.mapa-leaflet { height: 480px; border-radius: 14px; box-shadow: 0 6px 32px var(--sombra); border: 2px solid var(--gris-med); }
 .dst-pin { width: 36px; height: 36px; background: var(--azul-oscuro); border-radius: 50% 50% 50% 0; transform: rotate(-45deg); display: flex; align-items: center; justify-content: center; box-shadow: 0 3px 10px rgba(0,0,0,0.3); border: 2px solid var(--dorado); }
 .dst-pin span, .dst-pin { font-size: 16px; }
 

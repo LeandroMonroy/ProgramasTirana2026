@@ -642,7 +642,7 @@
     <div class="section-tag">Territorio</div>
     <h2 class="section-title">Mapa Operativo <span>DST Tirana 2026</span></h2>
     <p class="section-desc">Distribuci&#243;n territorial del Dispositivo Sanitario Transitorio durante la Festividad de La Tirana 2026.</p>
-    <div id="mapa-leaflet" class="mapa-leaflet reveal"></div>
+    <div id="mapa-leaflet" class="mapa-leaflet"></div>
   </div>
 </section>
 
@@ -785,7 +785,7 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-(function(){
+window.addEventListener("load", function(){
   var map = L.map("mapa-leaflet", { zoomControl: true, scrollWheelZoom: false })
     .setView([-20.338, -69.650], 13);
 
@@ -837,7 +837,8 @@
     return d;
   };
   leyenda.addTo(map);
-})();
+  setTimeout(function(){ map.invalidateSize(); }, 200);
+});
 </script>
 <script src="assets/js/plan-salud.js"></script>
 </body>
