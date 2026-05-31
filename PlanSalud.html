@@ -817,8 +817,6 @@
     }).addTo(grupo).bindPopup("<strong>" + c.nombre + "</strong>");
   });
   grupo.addTo(map);
-  map.fitBounds(grupo.getBounds(), { padding: [24, 24] });
-  map.once("moveend", function(){ map.zoomIn(1); });
 
   var leyenda = L.control({ position: "bottomright" });
   leyenda.onAdd = function() {
@@ -831,7 +829,11 @@
   };
   leyenda.addTo(map);
 
-  setTimeout(function(){ map.invalidateSize(); }, 300);
+  setTimeout(function(){
+    map.invalidateSize();
+    map.fitBounds(grupo.getBounds(), { padding: [24, 24], animate: false });
+    map.zoomIn(1);
+  }, 300);
 })();
 </script>
 <script src="assets/js/plan-salud.js"></script>
