@@ -206,60 +206,140 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .agl-tfoot-val   { padding: 1.1rem 1.3rem; text-align: right; font-family: 'Barlow Condensed', sans-serif; font-size: 1.4rem; font-weight: 900; color: var(--verde-claro); white-space: nowrap; }
 .agl-tfoot-pct   { padding: 1.1rem 1.3rem; text-align: right; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 700; color: rgba(255,255,255,0.75); }
 
-/* RESPONSIVE */
 @media (max-width: 1024px) {
-  /* Organigrama: columna única desde tablet */
-  .dst-h-connector  { display: none; }
-  .dst-v-line-center { height: 20px; }
+  .dst-h-connector, .dst-v-line-center,
+  .dst-v-tick, .dst-v-sub,
+  .dst-sub-h-line, .dst-v-sub-tick { display: none; }
+
   .dst-top-row { flex-direction: column; align-items: center; gap: 0.8rem; }
-  .dst-top-connector { display: none; }
-  .dst-external { display: none; }
+  .dst-top-connector, .dst-external { display: none; }
   .dst-director { max-width: 100%; width: 100%; }
+
   .dst-level2 {
     flex-direction: column;
-    align-items: stretch;
     gap: 0;
-    border-left: 2px solid var(--gris-med);
-    margin-left: 1rem;
-    padding-left: 1rem;
+    position: relative;
+    padding-left: 2.4rem;
+    margin-top: 0;
   }
+  .dst-level2::before {
+    content: "";
+    position: absolute;
+    left: 0.6rem;
+    top: 1.2rem;
+    bottom: 2.2rem;
+    width: 2px;
+    background: var(--azul-claro);
+    border-radius: 2px;
+  }
+
   .dst-dept-col, .dst-dept-col--main {
     flex: unset; width: 100%;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #e8eef7;
-    margin-bottom: 0.5rem;
+    position: relative;
+    padding-bottom: 1.2rem;
   }
-  .dst-dept-col:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-  .dst-v-tick { height: 12px; }
-  .dst-dept { text-align: left; display: flex; align-items: center; gap: 0.8rem; padding: 0.9rem 1rem; }
-  .dst-dept-icon { font-size: 1.4rem; margin-bottom: 0; flex-shrink: 0; }
-  .dst-dept h4, .dst-dept p { text-align: left; }
-  .dst-dept h4 { font-size: 0.92rem; }
-  .dst-v-sub { height: 10px; margin-left: 1rem; }
-  .dst-sub-h-line { display: none; }
-  .dst-v-sub-tick { display: none; }
-  .dst-sub-row { flex-direction: column; gap: 0.5rem; }
-  .dst-sub-col, .dst-sub-col--wide { flex: unset; width: 100%; }
+  .dst-dept-col:last-child { padding-bottom: 0; }
+  .dst-dept-col::before {
+    content: "";
+    position: absolute;
+    left: -1.8rem;
+    top: 1.4rem;
+    width: 1.6rem;
+    height: 2px;
+    background: var(--azul-claro);
+  }
+
+  .dst-dept {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.75rem 1rem;
+  }
+  .dst-dept-icon { font-size: 1.3rem; margin-bottom: 0; flex-shrink: 0; }
+  .dst-dept h4 { font-size: 0.88rem; text-align: left; margin-bottom: 0.1rem; }
+  .dst-dept p  { font-size: 0.72rem; line-height: 1.35; text-align: left; }
+
+  .dst-sub-row {
+    flex-direction: column;
+    position: relative;
+    padding-left: 2rem;
+    gap: 0;
+    margin-top: 0.4rem;
+  }
+  .dst-sub-row::before {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    top: 0.3rem;
+    bottom: 1.5rem;
+    width: 2px;
+    background: var(--gris-med);
+    border-radius: 2px;
+  }
+  .dst-sub-col, .dst-sub-col--wide {
+    flex: unset; width: 100%;
+    position: relative;
+    padding-bottom: 0.7rem;
+  }
+  .dst-sub-col:last-child { padding-bottom: 0; }
+  .dst-sub-col::before {
+    content: "";
+    position: absolute;
+    left: -1.6rem;
+    top: 0.8rem;
+    width: 1.5rem;
+    height: 2px;
+    background: var(--gris-med);
+  }
   .dst-equipo-block--wide { flex: unset; width: 100%; }
   .dst-roles-2col { grid-template-columns: 1fr 1fr; }
-  .dst-role-card { white-space: normal; font-size: 0.8rem; padding: 0.4rem 0.6rem; }
-  .dst-subcargo-card { text-align: left; display: flex; align-items: center; gap: 0.8rem; }
-  .dst-subcargo-card .dst-dept-icon { margin-bottom: 0; }
-  /* AGL stats */
+  .dst-role-card { white-space: normal; font-size: 0.78rem; padding: 0.38rem 0.55rem; }
+
+  .dst-subcargo-card {
+    margin-top: 0.4rem;
+    margin-left: 1.8rem;
+    position: relative;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.65rem 0.9rem;
+    border-left: 2px solid var(--azul-claro);
+  }
+  .dst-subcargo-card::before {
+    content: "";
+    position: absolute;
+    left: -1.6rem;
+    top: 50%;
+    width: 1.6rem;
+    height: 2px;
+    background: var(--azul-claro);
+    transform: translateY(-50%);
+  }
+  .dst-subcargo-card .dst-dept-icon { font-size: 1.2rem; margin-bottom: 0; flex-shrink: 0; }
+  .dst-subcargo-card h4 { font-size: 0.85rem; margin: 0 0 0.1rem; text-align: left; }
+  .dst-subcargo-card p  { font-size: 0.72rem; margin: 0; text-align: left; color: #6080a0; }
+
   .agl-stats-grid { grid-template-columns: repeat(2, 1fr); }
   .nav-links { display: none; }
 }
+
 @media (max-width: 768px) {
   nav { padding: 0 1.2rem; }
   .hero { padding: 100px 1.2rem 60px; }
   .hero h1 { font-size: clamp(2rem, 9vw, 2.8rem); }
   section { padding: 60px 1.2rem; min-height: unset; }
-  .dst-level2 { margin-left: 0.6rem; padding-left: 0.8rem; }
+  .dst-level2 { padding-left: 2rem; }
+  .dst-level2::before { left: 0.4rem; }
+  .dst-dept-col::before { left: -1.6rem; }
   .dst-roles-2col { grid-template-columns: 1fr; }
   .agl-stats-grid { grid-template-columns: 1fr 1fr; }
 }
+
 @media (max-width: 500px) {
   .agl-stats-grid { grid-template-columns: 1fr; }
+  .dst-roles-2col { grid-template-columns: 1fr; }
   .dst-dept { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
 }
 
