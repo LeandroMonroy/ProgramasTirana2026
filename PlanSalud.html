@@ -791,11 +791,12 @@
   var map = L.map("mapa-leaflet", {
     zoomControl: true,
     scrollWheelZoom: false
-  }).setView([-20.338, -69.650], 13);
+  });
 
-  L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
-    attribution: "Tiles &copy; Esri &mdash; Source: Esri, USDA, USGS, GeoEye, Getmapping, IGN",
-    maxZoom: 19
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> &copy; <a href='https://carto.com/'>CARTO</a>",
+    subdomains: "abcd",
+    maxZoom: 20
   }).addTo(map);
 
   var cuadrantes = [
@@ -805,12 +806,15 @@
     { nombre: "Cuadrante SO", color: "#e67e22", coords: [[-20.3379871,-69.6566282],[-20.3515764,-69.6562734],[-20.3552178,-69.655222],[-20.3568071,-69.6522179],[-20.3559219,-69.6518746],[-20.3529445,-69.6523896],[-20.352522,-69.6522823],[-20.3524616,-69.6335283],[-20.3408531,-69.633421],[-20.3407525,-69.6446219],[-20.3378664,-69.6446977],[-20.3378664,-69.6496974],[-20.3375937,-69.6517673],[-20.3379536,-69.6521061],[-20.3379871,-69.6566282]] }
   ];
 
+  var grupo = L.featureGroup();
   cuadrantes.forEach(function(c) {
     L.polygon(c.coords, {
       color: c.color, weight: 2.5,
-      fillColor: c.color, fillOpacity: 0.22
-    }).addTo(map).bindPopup("<strong>" + c.nombre + "</strong>");
+      fillColor: c.color, fillOpacity: 0.28
+    }).addTo(grupo).bindPopup("<strong>" + c.nombre + "</strong>");
   });
+  grupo.addTo(map);
+  map.fitBounds(grupo.getBounds(), { padding: [24, 24] });
 
   var leyenda = L.control({ position: "bottomright" });
   leyenda.onAdd = function() {
