@@ -129,7 +129,9 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .dst-dept h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 0.98rem; font-weight: 800; text-transform: uppercase; color: var(--azul-oscuro); margin-bottom: 0.25rem; line-height: 1.2; }
 .dst-dept p { font-size: 0.78rem; color: #6080a0; line-height: 1.45; }
 
-.dst-equipos-section { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; width: 55%; margin-top: 1.8rem; }
+.dst-equipos-section { display: flex; justify-content: center; width: 70%; margin-top: 1.8rem; }
+.dst-equipo-block--wide { width: 100%; }
+.dst-roles-grid--2col { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; padding: 0.8rem; background: #f4f7fc; border-radius: 0 0 10px 10px; border: 1px solid var(--gris-med); border-top: none; }
 .dst-equipo-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 900; letter-spacing: 0.14em; text-transform: uppercase; background: var(--verde-dst); color: var(--blanco); padding: 0.4rem 1rem; border-radius: 6px 6px 0 0; text-align: center; }
 .dst-roles-grid { display: flex; flex-direction: column; gap: 0.5rem; padding: 0.8rem; background: #f4f7fc; border-radius: 0 0 10px 10px; border: 1px solid var(--gris-med); border-top: none; }
 .dst-role-card { background: var(--blanco); border-radius: 6px; padding: 0.6rem 0.9rem; font-size: 0.84rem; color: var(--texto-oscuro); border-left: 3px solid var(--verde-claro); box-shadow: 0 1px 6px rgba(0,0,0,0.06); }
