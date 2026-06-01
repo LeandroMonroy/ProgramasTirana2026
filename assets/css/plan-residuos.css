@@ -140,6 +140,31 @@
     .camino-row-2 { grid-template-columns: 1fr; max-width: 100%; }
   }
 
+  /* DESARROLLO OPERATIVO */
+  .operativo-section { background: var(--gris-claro); }
+  .operativo-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2.5rem; align-items: start; margin-top: 2rem; }
+  .operativo-map-wrap { border-radius: 16px; overflow: hidden; box-shadow: 0 6px 32px var(--sombra); border: 3px solid var(--azul-claro); }
+  #mapa-operativo { width: 100%; height: 480px; }
+  .op-leyenda { background: var(--azul-oscuro); padding: 0.8rem 1.2rem; display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .op-ley-item { display: flex; align-items: center; gap: 0.4rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blanco); }
+  .ley-icon { font-size: 1rem; }
+  .ley-camion { color: #1abc9c; }
+  .ley-sup { color: var(--dorado); }
+  .ley-barr { color: #a0b8d0; }
+  .operativo-info { display: flex; flex-direction: column; gap: 2rem; }
+  .op-subtitle { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--azul-oscuro); margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 3px solid var(--dorado); }
+  .op-lista { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; }
+  .op-lista li { font-size: 0.93rem; color: #3a4a5a; line-height: 1.5; padding-left: 1.4rem; position: relative; }
+  .op-lista li::before { content: '▸'; position: absolute; left: 0; color: var(--dorado); font-size: 0.85rem; top: 1px; }
+  .op-table { width: 100%; border-collapse: collapse; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px var(--sombra); }
+  .op-table thead th { background: var(--dorado); color: var(--azul-oscuro); font-family: 'Barlow Condensed', sans-serif; font-size: 0.9rem; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.8rem 1rem; text-align: center; }
+  .op-table tbody tr { border-bottom: 1px solid var(--gris-med); }
+  .op-table tbody tr:last-child { border-bottom: none; }
+  .op-table tbody tr:nth-child(even) { background: var(--gris-claro); }
+  .op-table tbody td { padding: 0.7rem 1rem; font-size: 0.9rem; color: var(--texto-oscuro); text-align: center; }
+  .op-table tbody td:first-child { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--azul); }
+  @media (max-width: 900px) { .operativo-layout { grid-template-columns: 1fr; } #mapa-operativo { height: 320px; } }
+
 /* FOOTER */
   footer { background: var(--texto-oscuro); border-top: 3px solid var(--dorado); padding: 2.5rem 2rem; text-align: center; }
   footer img { height: 36px; object-fit: contain; opacity: 0.9; margin: 0 0.8rem; mix-blend-mode: screen; }
