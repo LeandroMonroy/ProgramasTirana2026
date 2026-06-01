@@ -137,23 +137,29 @@ const observer = new IntersectionObserver(entries => {
     } catch(e) {}
   }
 
-  document.querySelectorAll('.apoyo-logo').forEach(img => {
+  document.querySelectorAll('.apoyo-logo, .mejoras-truck-img').forEach(img => {
     img.complete ? trimWhite(img) : img.addEventListener('load', () => trimWhite(img), { once: true });
   });
 
   // Programacion de camiones
   (function(){
     var schedule = [
-      { label:'L1 — Reparto', tipo:'reparto', days:[0,1,1,1,1,1,1,1,1,1,1,1,1] },
-      { label:'L2 — Reparto', tipo:'reparto', days:[0,1,1,1,1,1,1,1,1,1,1,1,0] },
-      { label:'L3 — Reparto', tipo:'reparto', days:[0,1,1,1,1,1,1,1,1,1,1,1,0] },
-      { label:'L4 — Reparto', tipo:'reparto', days:[0,0,0,0,0,0,1,1,1,1,1,1,1] },
-      { label:'L5 — Reparto', tipo:'reparto', days:[0,0,0,0,0,0,1,1,1,1,1,1,1] },
-      { label:'L6 — Riego',   tipo:'riego',   days:[1,0,1,1,1,1,1,1,1,1,1,1,1] },
-      { label:'L7 — Riego',   tipo:'riego',   days:[0,1,1,1,1,1,1,1,1,1,1,1,0] },
+      { label:'L1 — Reparto Contratado',  tipo:'reparto', days:[0,1,1,1,1,1,1,1,1,1,1,1,1] },
+      { label:'L2 — Reparto Contratado',  tipo:'reparto', days:[0,1,1,1,1,1,1,1,1,1,1,0,0] },
+      { label:'L3 — Reparto Contratado',  tipo:'reparto', days:[0,1,1,1,1,1,1,1,1,1,1,0,0] },
+      { label:'L4 — Reparto Contratado',  tipo:'reparto', days:[0,0,0,0,0,0,1,1,1,1,1,0,0] },
+      { label:'L5 — Reparto Contratado',  tipo:'reparto', days:[0,0,0,0,0,0,1,1,1,1,1,0,0] },
+      { label:'L6 — Pozo Almonte',        tipo:'reparto', days:[0,1,1,1,1,1,1,1,1,1,1,1,1] },
+      { label:'L7 — Pozo Almonte',        tipo:'reparto', days:[0,1,1,1,1,1,1,1,1,1,1,1,1] },
+      { label:'L8 — Iquique',             tipo:'reparto', days:[0,0,1,1,1,1,1,1,1,1,0,0,0] },
+      { label:'L9 — Alto Hospicio',       tipo:'reparto', days:[0,0,1,1,1,1,1,1,1,1,1,0,0] },
+      { label:'L10 — Tocopilla',          tipo:'reparto', days:[0,0,0,0,0,0,1,1,1,1,1,0,0] },
+      { label:'L11 — Antofagasta',        tipo:'reparto', days:[0,0,0,0,0,0,1,1,1,1,1,0,0] },
+      { label:'L1 — Riego Contratado',    tipo:'riego',   days:[1,1,1,1,1,1,1,1,1,1,1,1,1] },
+      { label:'L2 — Riego Contratado',    tipo:'riego',   days:[1,1,1,1,1,1,1,1,1,1,1,1,0] },
     ];
     var dates  = ['07','08','09','10','11','12','13','14','15','16','17','18','19'];
-    var isPeak = [0,0,0,0,0,0,1,1,1,1,1,1,0];
+    var isPeak = [0,0,0,0,0,0,1,1,1,1,0,0,0];
     var counts = dates.map(function(_,i){ return schedule.reduce(function(s,l){ return s+l.days[i]; },0); });
     var maxC   = Math.max.apply(null, counts);
 
@@ -225,7 +231,7 @@ const observer = new IntersectionObserver(entries => {
           scales: {
             y: {
               min: 0,
-              max: 8,
+              max: 14,
               ticks: {
                 stepSize: 1,
                 color: '#6a8098',

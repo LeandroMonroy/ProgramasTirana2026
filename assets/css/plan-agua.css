@@ -86,6 +86,7 @@
   .dist-card { display: flex; align-items: center; gap: 1.5rem; border-radius: 16px; padding: 1.8rem 2rem; box-shadow: 0 4px 20px var(--sombra); color: var(--blanco); }
   .dist-potable { background: linear-gradient(135deg, var(--azul-oscuro), #0b2247); border-left: 5px solid var(--azul-claro); }
   .dist-riego { background: linear-gradient(135deg, #1a4030, #0d2218); border-left: 5px solid #4ade80; }
+  .dist-apoyo { background: linear-gradient(135deg, #3d2200, #1f1100); border-left: 5px solid var(--dorado); }
   .dist-num { font-family: 'Barlow Condensed', sans-serif; font-size: 4rem; font-weight: 900; color: var(--dorado); line-height: 1; flex-shrink: 0; min-width: 80px; text-align: center; }
   .dist-type { font-family: 'Barlow Condensed', sans-serif; font-size: 1.15rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--dorado); margin-bottom: 0.4rem; }
   .dist-desc { font-size: 0.9rem; color: rgba(255,255,255,0.82); line-height: 1.55; }
@@ -125,6 +126,20 @@
   .mejoras-cap-badge .cap-unit { display: block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.7); }
   .mejoras-manguera { position: absolute; bottom: -25%; right: 0; width: 55%; pointer-events: none; }
     @media (max-width: 768px) { .mejoras-layout { grid-template-columns: 1fr; } .mejoras-img-wrap { order: -1; } }
+  .mejoras-equiv { margin-top: 2.5rem; background: linear-gradient(135deg, var(--azul-oscuro), #0b2247); border-radius: 16px; padding: 1.8rem 2rem; border-left: 5px solid var(--dorado); }
+  .mejoras-equiv-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--dorado); margin-bottom: 1rem; }
+  .mejoras-equiv-body { display: flex; align-items: center; gap: 2.5rem; flex-wrap: wrap; }
+  .mejoras-equiv-text { flex: 1; min-width: 200px; color: var(--blanco); }
+  .mejoras-equiv-text strong { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--dorado); display: block; margin-bottom: 0.4rem; }
+  .mejoras-equiv-num { font-family: 'Barlow Condensed', sans-serif; font-size: 2rem; font-weight: 900; color: var(--blanco); display: block; margin-bottom: 0.3rem; }
+  .mejoras-equiv-sub { font-size: 0.85rem; color: rgba(255,255,255,0.7); }
+  .mejoras-equiv-trucks { display: flex; align-items: flex-start; flex-shrink: 0; }
+  .mejoras-truck-wrap { display: block; }
+  .mejoras-truck-wrap:first-child { z-index: 1; margin-right: -110px; margin-top: 35px; }
+  .mejoras-truck-wrap:first-child .mejoras-truck-img { width: 250px; filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.35)) drop-shadow(6px 8px 20px rgba(0,0,0,0.25)); }
+  .mejoras-truck-wrap:last-child { z-index: 2; }
+  .mejoras-truck-wrap:last-child .mejoras-truck-img { width: 320px; filter: drop-shadow(4px 8px 10px rgba(0,0,0,0.6)) drop-shadow(0 16px 30px rgba(0,0,0,0.4)); }
+  .mejoras-truck-img { display: block; }
 
   /* SECTORES */
   .sectores-layout { display: flex; flex-direction: column; gap: 1.2rem; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
@@ -310,6 +325,7 @@
   .td-cant { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 900; color: var(--azul); text-align: center !important; }
   .td-item { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--azul-oscuro); text-transform: uppercase; letter-spacing: 0.03em; }
   .td-item .item-icon { margin-right: 0.45rem; }
+  .fondo-detalle { font-size: 0.78rem; font-weight: 500; color: #6a8098; text-transform: none; letter-spacing: 0; display: block; margin-top: 0.15rem; }
   .td-val { text-align: right !important; font-weight: 600; color: #3a5070; white-space: nowrap; }
   .td-total { text-align: right !important; font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--azul); white-space: nowrap; }
   .compras-table tfoot tr { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)); }
