@@ -290,6 +290,5 @@
 }
 
 .card-salud { border-color: rgba(13,124,110,0.3); }
-  .card-residuos .prog-card-header { font-size: 0.9em; min-height: 180px; }
-  .card-residuos .prog-card-body { min-height: 120px; }
+  .card-residuos .prog-card-header h3 { font-size: 1.05rem; }
 .card-salud:hover { border-color: #1aaa96; box-shadow: 0 18px 50px rgba(13,124,110,0.22); }
