@@ -198,9 +198,10 @@
   .noc-horario-header { display: flex; align-items: center; gap: 0.7rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--dorado); }
   .noc-horario-header i { font-size: 1.4rem; }
   .nocturno-horario .op-table tbody td:first-child { color: var(--blanco); }
-  .nocturno-horario .op-table tbody tr { border-color: rgba(255,255,255,0.1); }
-  .nocturno-horario .op-table tbody td { color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.04); }
-  .nocturno-horario .op-table tbody tr:nth-child(even) td { background: rgba(255,255,255,0.08); }
+  .nocturno-horario .op-table tbody tr { border-color: rgba(255,255,255,0.1); background: transparent !important; }
+  .nocturno-horario .op-table tbody tr:nth-child(even) { background: transparent !important; }
+  .nocturno-horario .op-table tbody td { color: rgba(255,255,255,0.9) !important; background: rgba(255,255,255,0.04) !important; }
+  .nocturno-horario .op-table tbody tr:nth-child(even) td { background: rgba(255,255,255,0.12) !important; }
   .noc-kpi-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
   .noc-kpi { background: rgba(245,168,0,0.1); border: 1px solid rgba(245,168,0,0.25); border-radius: 12px; padding: 1.2rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
   .noc-kpi i { font-size: 1.4rem; color: var(--dorado); }
