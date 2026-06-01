@@ -21,6 +21,7 @@
   .nav-logos img { height: 42px; object-fit: contain; mix-blend-mode: screen; }
   .nav-sep { width: 1px; height: 32px; background: rgba(245,168,0,0.4); }
   .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links li { list-style: none; }
   .nav-links a { color: var(--gris-med); text-decoration: none; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.88rem; letter-spacing: 0.06em; text-transform: uppercase; transition: color .22s; }
   .nav-links a:hover { color: var(--dorado); }
   @media (max-width: 768px) { .nav-links { display: none; } }
