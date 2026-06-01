@@ -123,6 +123,23 @@
     .fumig-lugar-foto { height: 220px; }
   }
 
+  /* CAMINO DEL PEREGRINO */
+  .camino-section { background: var(--gris-claro); }
+  .camino-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; text-transform: uppercase; color: var(--azul-oscuro); line-height: 1.1; margin-bottom: 3rem; }
+  .camino-title span { color: var(--dorado); }
+  .camino-stats-row { display: grid; gap: 2rem; margin-bottom: 2rem; }
+  .camino-row-3 { grid-template-columns: repeat(3, 1fr); }
+  .camino-row-2 { grid-template-columns: repeat(2, 1fr); max-width: 680px; margin-left: auto; margin-right: auto; margin-bottom: 0; }
+  .camino-stat { text-align: center; padding: 2rem 1.5rem; background: var(--blanco); border-radius: 16px; box-shadow: 0 4px 20px var(--sombra); border-top: 4px solid var(--dorado); }
+  .camino-num { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(2.8rem, 5vw, 4rem); font-weight: 900; color: var(--azul-oscuro); line-height: 1; margin-bottom: 0.5rem; }
+  .camino-unit { font-size: 0.55em; font-weight: 700; color: var(--dorado); vertical-align: middle; }
+  .camino-label { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--azul-oscuro); margin-bottom: 0.6rem; }
+  .camino-desc { font-size: 0.88rem; color: #4a6080; line-height: 1.6; }
+  @media (max-width: 768px) {
+    .camino-row-3 { grid-template-columns: 1fr; }
+    .camino-row-2 { grid-template-columns: 1fr; max-width: 100%; }
+  }
+
 /* FOOTER */
   footer { background: var(--texto-oscuro); border-top: 3px solid var(--dorado); padding: 2.5rem 2rem; text-align: center; }
   footer img { height: 36px; object-fit: contain; opacity: 0.9; margin: 0 0.8rem; mix-blend-mode: screen; }
