@@ -102,6 +102,27 @@
     .tl-content { grid-column: 2; grid-row: 1; text-align: left !important; border-right: none !important; border-left: 4px solid var(--dorado) !important; }
     .tl-empty { display: none; }
   }
+  /* FUMIGACIÓN */
+  .fumigacion-section { background: var(--blanco); }
+  .fumig-layout { display: grid; grid-template-columns: 1fr auto; gap: 3rem; align-items: center; margin-top: 2.5rem; }
+  .fumig-text p { font-size: 1rem; line-height: 1.8; color: #3a4a5a; text-align: justify; }
+  .fumig-img-wrap { flex-shrink: 0; }
+  .fumig-img { width: 320px; filter: drop-shadow(0 8px 24px rgba(0,0,0,0.15)); display: block; }
+  .fumig-lugar { margin-top: 3rem; display: grid; grid-template-columns: 1fr 1.6fr; gap: 2rem; align-items: center; background: var(--gris-claro); border-radius: 20px; overflow: hidden; }
+  .fumig-lugar-label { padding: 2rem; }
+  .fumig-lugar-label .section-tag { margin-bottom: 0.5rem; }
+  .fumig-lugar-label strong { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 900; text-transform: uppercase; color: var(--azul-oscuro); display: block; margin-bottom: 0.8rem; letter-spacing: 0.03em; }
+  .fumig-lugar-label p { font-size: 0.9rem; color: #4a6080; line-height: 1.6; }
+  .fumig-lugar-foto { height: 280px; overflow: hidden; }
+  .fumig-lugar-foto img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  .fumig-foto-placeholder { height: 280px; display: flex; align-items: center; justify-content: center; background: var(--gris-med); color: #6a8098; font-size: 1rem; gap: 0.5rem; }
+  @media (max-width: 768px) {
+    .fumig-layout { grid-template-columns: 1fr; }
+    .fumig-img { width: 100%; max-width: 280px; margin: 0 auto; }
+    .fumig-lugar { grid-template-columns: 1fr; }
+    .fumig-lugar-foto { height: 220px; }
+  }
+
 /* FOOTER */
   footer { background: var(--texto-oscuro); border-top: 3px solid var(--dorado); padding: 2.5rem 2rem; text-align: center; }
   footer img { height: 36px; object-fit: contain; opacity: 0.9; margin: 0 0.8rem; mix-blend-mode: screen; }
