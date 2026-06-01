@@ -166,17 +166,20 @@
   @media (max-width: 900px) { .operativo-layout { grid-template-columns: 1fr; } #mapa-operativo { height: 320px; } }
 
   /* ESTRATEGIAS DE SECTORIZACIÓN */
-  .sectoriz-section { background: var(--blanco); }
+  .sectoriz-section { background: rgba(11,30,62,0.97); }
+  .sectoriz-section .section-tag { color: var(--dorado); border-color: var(--dorado); }
+  .sectoriz-section .section-title { color: var(--blanco); }
   .sectoriz-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 2.5rem; }
-  .sectoriz-card { background: var(--gris-claro); border-radius: 18px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 4px 20px var(--sombra); border: 1.5px solid var(--gris-med); transition: transform .25s, box-shadow .25s; }
-  .sectoriz-card:hover { transform: translateY(-5px); box-shadow: 0 12px 36px rgba(27,79,138,0.14); border-color: var(--azul-claro); }
+  .sectoriz-card { background: rgba(255,255,255,0.06); border-radius: 18px; padding: 2rem; display: flex; flex-direction: column; gap: 1rem; border: 1.5px solid rgba(245,168,0,0.25); transition: transform .25s, box-shadow .25s, background .25s; }
+  .sectoriz-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.11); border-color: var(--dorado); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
   .sectoriz-header { display: flex; align-items: center; gap: 1rem; }
-  .sectoriz-num { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--dorado), var(--dorado-oscuro)); color: var(--azul-oscuro); font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 3px 12px rgba(245,168,0,0.4); }
-  .sectoriz-header h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.15rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--azul-oscuro); line-height: 1.2; }
-  .sectoriz-card p { font-size: 0.92rem; color: #4a5568; line-height: 1.7; text-align: justify; flex: 1; }
-  .sectoriz-icons { display: flex; justify-content: flex-end; gap: 0.8rem; margin-top: auto; padding-top: 0.5rem; border-top: 1px solid var(--gris-med); }
-  .sectoriz-icons i { font-size: 1.3rem; color: var(--azul-claro); }
-  .sectoriz-icons .fa-recycle { color: #27ae60; }
+  .sectoriz-num { width: 44px; height: 44px; border-radius: 50%; background: linear-gradient(135deg, var(--dorado), var(--dorado-oscuro)); color: var(--azul-oscuro); font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 3px 14px rgba(245,168,0,0.5); }
+  .sectoriz-header h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.15rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--blanco); line-height: 1.2; }
+  .sectoriz-card p { font-size: 0.92rem; color: rgba(255,255,255,0.75); line-height: 1.7; text-align: justify; flex: 1; }
+  .sectoriz-icons { display: flex; justify-content: flex-end; gap: 0.8rem; margin-top: auto; padding-top: 0.8rem; border-top: 1px solid rgba(245,168,0,0.2); }
+  .sectoriz-icons i { font-size: 1.4rem; }
+  .sectoriz-icons .fa-recycle { color: #4ade80; }
+  .sectoriz-icons .fa-truck-moving { color: var(--dorado); }
   @media (max-width: 900px) { .sectoriz-grid { grid-template-columns: 1fr; } }
 
 /* FOOTER */
