@@ -260,9 +260,10 @@
 
 /* BANDERINES INFORMATIVOS */
 .banderines-section {
-  background-size: cover;
-  background-position: center center;
+  background-size: auto 100%;
+  background-position: right center;
   background-repeat: no-repeat;
+  background-color: #050f28;
   padding: 0;
   min-height: 600px;
   display: flex;
@@ -273,13 +274,13 @@
   width: 100%;
   min-height: 600px;
 }
-.banderines-left { /* transparent — shows background image */ }
-.banderines-right {
-  background: linear-gradient(to right, rgba(5,15,40,0) 0%, rgba(5,15,40,0.88) 15%, rgba(5,15,40,0.97) 100%);
-  padding: 5rem 3.5rem 5rem 4rem;
+.banderines-left {
+  background: linear-gradient(to left, rgba(5,15,40,0) 0%, rgba(5,15,40,0.88) 18%, rgba(5,15,40,0.97) 100%);
+  padding: 5rem 4rem 5rem 3.5rem;
   display: flex;
   align-items: center;
 }
+.banderines-right { /* transparent — shows background image */ }
 .banderines-content { max-width: 520px; }
 .ban-tag {
   display: inline-block;
@@ -318,6 +319,6 @@
 .ban-item p { font-size: 0.83rem; color: rgba(200,214,232,0.8); line-height: 1.5; margin: 0; }
 @media (max-width: 768px) {
   .banderines-layout { grid-template-columns: 1fr; }
-  .banderines-left { display: none; }
-  .banderines-right { background: rgba(5,15,40,0.93); padding: 3rem 1.5rem; }
+  .banderines-right { display: none; }
+  .banderines-left { background: rgba(5,15,40,0.95); padding: 3rem 1.5rem; }
 }
