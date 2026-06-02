@@ -572,7 +572,7 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 
 /* PRESUPUESTO CONSOLIDADO */
 #consolidado { background: var(--gris-claro); }
-.pcon-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(11,31,66,0.22); margin-top: 2.5rem; }
+.pcon-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(11,31,66,0.22); margin-top: 2.5rem; align-items: stretch; }
 .pcon-col { display: flex; flex-direction: column; }
 .pcon-header { padding: 1.6rem 1.8rem; text-align: center; }
 .pcon-col--azul .pcon-header  { background: var(--azul-oscuro); }
@@ -581,7 +581,7 @@ nav.compact .nav-links a:hover { color:var(--blanco); }
 .pcon-total { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); font-weight: 900; color: var(--blanco); line-height: 1; letter-spacing: -0.01em; }
 .pcon-fuente { font-family: 'Barlow Condensed', sans-serif; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.7); margin-top: 0.4rem; }
 .pcon-items { flex: 1; display: flex; flex-direction: column; }
-.pcon-item { padding: 1rem 1.6rem; border-bottom: 1px solid rgba(0,0,0,0.06); }
+.pcon-item { flex: 1; padding: 1rem 1.6rem; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; flex-direction: column; justify-content: center; }
 .pcon-item:last-child { border-bottom: none; }
 .pcon-col--azul  .pcon-item { background: rgba(27,79,138,0.07); }
 .pcon-col--azul  .pcon-item:nth-child(even) { background: rgba(27,79,138,0.13); }
