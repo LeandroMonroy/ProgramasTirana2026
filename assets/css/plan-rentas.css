@@ -260,28 +260,38 @@
 
 /* BANDERINES INFORMATIVOS */
 .banderines-section {
-  background-size: auto 100%;
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-color: #050f28;
-  padding: 0;
-  min-height: 600px;
-  display: flex;
+  position: relative;
+  padding: 0 !important;
+  display: block;
+  background: none !important;
+  line-height: 0;
+  overflow: hidden;
 }
-.banderines-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.banderines-img {
+  display: block;
   width: 100%;
-  min-height: 600px;
+  height: auto;
+  margin-top: -12.36%;
+  margin-bottom: -6.18%;
 }
-.banderines-left {
-  background: linear-gradient(to left, rgba(5,15,40,0) 0%, rgba(5,15,40,0.88) 18%, rgba(5,15,40,0.97) 100%);
-  padding: 5rem 4rem 5rem 3.5rem;
+.banderines-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, transparent 40%, #050f28 65%);
+}
+.banderines-content {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%;
+  width: calc(53.33% - 1rem);
+  padding: 5rem 5rem;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  text-align: center;
+  line-height: normal;
 }
-.banderines-right { /* transparent — shows background image */ }
-.banderines-content { max-width: 520px; }
 .ban-tag {
   display: inline-block;
   font-family: 'Barlow Condensed', sans-serif;
@@ -302,10 +312,9 @@
   font-size: 0.97rem; line-height: 1.75;
   color: rgba(200,214,232,0.88);
   margin-bottom: 2rem;
-  border-left: 3px solid var(--dorado);
-  padding-left: 1rem;
+  max-width: 560px;
 }
-.banderines-items { display: flex; flex-direction: column; gap: 1.2rem; }
+.banderines-items { display: flex; flex-direction: column; gap: 1.2rem; width: 100%; max-width: 560px; }
 .ban-item {
   display: flex; align-items: flex-start; gap: 1rem;
   background: rgba(255,255,255,0.06);
@@ -318,7 +327,31 @@
 .ban-item strong { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--blanco); display: block; margin-bottom: 0.25rem; }
 .ban-item p { font-size: 0.83rem; color: rgba(200,214,232,0.8); line-height: 1.5; margin: 0; }
 @media (max-width: 768px) {
-  .banderines-layout { grid-template-columns: 1fr; }
-  .banderines-right { display: none; }
-  .banderines-left { background: rgba(5,15,40,0.95); padding: 3rem 1.5rem; }
+  .banderines-section {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    line-height: normal;
+  }
+  .banderines-img {
+    position: static;
+    order: 2;
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .banderines-overlay {
+    display: none;
+  }
+  .banderines-content {
+    position: static;
+    order: 1;
+    width: 100%;
+    height: auto;
+    padding: 3rem 1.5rem;
+    background: #050f28;
+    align-items: center;
+    text-align: center;
+  }
 }
