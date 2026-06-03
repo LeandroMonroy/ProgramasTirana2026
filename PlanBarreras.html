@@ -70,47 +70,48 @@
     <h2 class="section-title">Operación del <span>Programa</span></h2>
     <p class="section-desc">Durante la ejecución del programa se implementan 10 puntos de control vehicular distribuidos en los accesos al pueblo.</p>
 
-    <div class="operacion-grid">
-      <div class="op-card reveal">
-        <div class="op-num">10</div>
-        <h4>Puntos de Control Vehicular</h4>
-        <p>Distribuidos estratégicamente en los accesos al pueblo de La Tirana, abarcando la totalidad de los ingresos durante los días de festividad.</p>
+    <div class="op-gadgets">
+      <div class="op-gadget op-gadget--azul reveal">
+        <div class="op-gadget-icon"><i class="fa-solid fa-calendar-days"></i></div>
+        <div class="op-gadget-val">09 de Julio</div>
+        <div class="op-gadget-title">Inicio del Programa</div>
+        <div class="op-gadget-sub">Comienzo oficial del control de accesos</div>
       </div>
-      <div class="op-card op-card-dark reveal">
-        <h4>Fiscalización del Tránsito</h4>
-        <p>En cada punto se verifica la <strong>"Autorización de permiso especial para vehículos motorizados de la festividad religiosa de La Tirana"</strong>, documento otorgado exclusivamente por la Ilustre Municipalidad de Pozo Almonte.</p>
+      <div class="op-gadget op-gadget--verde reveal">
+        <div class="op-gadget-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <div class="op-gadget-val">19 de Julio</div>
+        <div class="op-gadget-title">T&eacute;rmino del Programa</div>
+        <div class="op-gadget-sub">Cierre del per&iacute;odo cr&iacute;tico de la festividad</div>
       </div>
+      <div class="op-gadget op-gadget--dorado reveal">
+        <div class="op-gadget-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+        <div class="op-gadget-val">08 de Julio</div>
+        <div class="op-gadget-title">Instalaci&oacute;n de Infraestructura</div>
+        <div class="op-gadget-sub">Montaje de casetas previo al inicio</div>
+      </div>
+      <div class="op-gadget op-gadget--rojo reveal">
+        <div class="op-gadget-icon"><i class="fa-solid fa-road-barrier"></i></div>
+        <div class="op-gadget-val">10 Puntos</div>
+        <div class="op-gadget-title">Control Vehicular</div>
+        <div class="op-gadget-sub">Distribuci&#243;n de los 10 puntos de barreras m&#243;viles para el control vehicular</div>
+      </div>
+    </div>
+
+
+    <div class="op-card op-card-dark fiscalizacion-fullwidth reveal">
+      <i class="fa-solid fa-magnifying-glass fiscalizacion-icon"></i>
+      <h4>Fiscalizaci&oacute;n del Tr&aacute;nsito</h4>
+      <p>En cada punto se verifica la <strong>&ldquo;Autorizaci&oacute;n de permiso especial para veh&iacute;culos motorizados de la festividad religiosa de La Tirana&rdquo;</strong>, documento otorgado exclusivamente por la Ilustre Municipalidad de Pozo Almonte.</p>
+    </div>
+
+    <div class="caseta-fullwidth reveal">
+      <img src="assets/img/Caseta1.png" alt="Caseta de control" class="caseta-op-img">
     </div>
 
     <div class="op-highlight reveal">
       <strong>Permiso de circulación especial:</strong> Tiene un valor diario y es exigido a todo vehículo que desee ingresar y circular dentro del área del casco antiguo de La Tirana durante los días de festividad.
     </div>
 
-    <h3 style="font-family:'Barlow Condensed',sans-serif;font-size:1.5rem;font-weight:800;text-transform:uppercase;color:var(--azul-oscuro);margin:3rem 0 1rem;">Hitos Operacionales</h3>
-
-    <div class="hitos-list">
-      <div class="hito-item reveal">
-        <span class="hito-icon">🔹</span>
-        <div>
-          <h5>Inicio del Programa</h5>
-          <p>El control de accesos comienza oficialmente el <strong>9 de julio</strong> y se extenderá hasta el <strong>19 de julio de 2026</strong>, cubriendo todo el período crítico de la festividad.</p>
-        </div>
-      </div>
-      <div class="hito-item reveal">
-        <span class="hito-icon">🔹</span>
-        <div>
-          <h5>Instalación de Infraestructura</h5>
-          <p>La instalación de casetas de control se realizará el <strong>8 de julio</strong>, previo al inicio del programa, garantizando la operatividad desde el primer día.</p>
-        </div>
-      </div>
-      <div class="hito-item reveal">
-        <span class="hito-icon">🔹</span>
-        <div>
-          <h5>Inducción y Equipamiento</h5>
-          <p>Se efectuará una inducción de seguridad dirigida a todos los barreristas — protocolos de emergencia, números de contacto y procedimientos operativos — junto con la entrega de EPP completo: chaqueta, gorro, guantes, credencial, botiquín, extintor, radio, linterna, calefactor, hervidor, agua, vasos, té y café.</p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -221,12 +222,61 @@
   if (!el) return;
 
   var map = L.map('mapa-barreras', { zoomControl: true, scrollWheelZoom: false });
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+
+  // ── Capas base ──
+  var esriSatelite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri', maxZoom: 19
-  }).addTo(map);
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+  });
+  var esriCalles = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri', maxZoom: 19
+  });
+  var esriTopo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri', maxZoom: 19
+  });
+  var esriNatGeo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri &amp; National Geographic', maxZoom: 16
+  });
+  var esriGris = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri', maxZoom: 16
+  });
+  var esriRelieve = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri', maxZoom: 13
+  });
+  var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom: 19
+  });
+  var cartoLight = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a>', maxZoom: 19
+  });
+  var cartoDark = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a>', maxZoom: 19
+  });
+
+  // ── Capa etiquetas (overlay) ──
+  var etiquetas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
     maxZoom: 19, opacity: 1
-  }).addTo(map);
+  });
+
+  // Activar por defecto: Satélite + etiquetas
+  esriSatelite.addTo(map);
+  etiquetas.addTo(map);
+
+  // ── Control de capas ──
+  var baseLayers = {
+    '🛰️ Satélite (ESRI)':    esriSatelite,
+    '🗺️ Calles (ESRI)':      esriCalles,
+    '🏔️ Topográfico (ESRI)': esriTopo,
+    '🌿 National Geographic': esriNatGeo,
+    '⬜ Gris claro (ESRI)':  esriGris,
+    '🗻 Relieve (ESRI)':     esriRelieve,
+    '🔵 OpenStreetMap':       osm,
+    '⬜ CartoDB Claro':       cartoLight,
+    '🌑 CartoDB Oscuro':      cartoDark
+  };
+  var overlays = {
+    '🏷️ Etiquetas y lugares': etiquetas
+  };
+  L.control.layers(baseLayers, overlays, { position: 'topright', collapsed: true }).addTo(map);
 
   var puntos = [
     { n: 'Acceso Principal',       lat: -20.3341485, lng: -69.6616981, color: '#E53935' },
