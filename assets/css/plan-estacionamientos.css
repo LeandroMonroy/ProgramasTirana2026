@@ -26,27 +26,20 @@
   /* HERO */
   .hero {
     min-height: 100vh;
-    background: linear-gradient(160deg, rgba(5,12,28,0.88) 0%, rgba(10,30,70,0.78) 50%, rgba(5,12,28,0.90) 100%),
-      url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect fill="%230d2247" width="400" height="400"/><path d="M0 200 Q100 100 200 200 T400 200" stroke="%231B4F8A" stroke-width="2" fill="none" opacity="0.3"/></svg>');
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 120px 2rem 80px; text-align: center; position: relative; overflow: hidden;
+    color: var(--blanco);
+    background-image:
+      linear-gradient(160deg, rgba(5,12,28,0.79) 0%, rgba(10,30,70,0.76) 50%, rgba(5,12,28,0.82) 100%),
+      url('../img/Estacionamientos.png');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    color: var(--blanco);
-    text-align: center;
-    margin-top: 60px;
-    padding: 3rem 1.5rem;
+    background-repeat: no-repeat;
   }
-  .hero::before {
+  .hero::after {
     content: '';
-    position: absolute; top: 0; left: 0; right: 0; bottom: 0;
-    background: radial-gradient(circle at 20% 50%, rgba(27,79,138,0.25), transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(245,168,0,0.12), transparent 50%);
-    pointer-events: none;
+    position: absolute; inset: 0; z-index: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(42,111,196,0.18) 0%, transparent 70%);
   }
   .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(245,168,0,0.15); border: 1px solid rgba(245,168,0,0.35); border-radius: 2rem; padding: 0.35rem 1.1rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--dorado); margin-bottom: 1.6rem; position: relative; z-index: 1; }
   .hero h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.05; letter-spacing: -0.01em; text-transform: uppercase; margin-bottom: 1rem; position: relative; z-index: 1; text-shadow: 0 2px 20px rgba(0,0,0,0.9), 0 4px 40px rgba(0,0,0,0.7); }
@@ -224,11 +217,89 @@
   .mat-card { background: var(--blanco); border-radius: 16px; padding: 2rem 1.8rem; box-shadow: 0 4px 22px var(--sombra); border-top: 4px solid var(--azul); display: flex; flex-direction: column; align-items: center; text-align: center; gap: 0.8rem; transition: transform .2s, box-shadow .2s; }
   .mat-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px var(--sombra); }
   .mat-icon { font-size: 3rem; line-height: 1; }
+  .mat-icon--fa { font-size: 0; }
+  .mat-icon--fa i { font-size: 3rem; color: var(--azul); }
   .mat-titulo { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--azul-oscuro); line-height: 1.2; }
   .mat-cantidad { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 3rem; color: var(--dorado); line-height: 1; }
   .mat-desc { font-size: 0.92rem; color: #4a6080; line-height: 1.7; }
   .mat-desc strong { color: var(--azul-oscuro); }
   @media (max-width: 768px) { .mat-grid { grid-template-columns: 1fr; } }
+
+  /* TABLAS COMPRAS (diseño PlanRentas) */
+  .mat-table-title { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--azul-oscuro); margin: 2.5rem 0 0.8rem; padding-left: 1rem; border-left: 4px solid var(--dorado); }
+  .compras-table-wrap { overflow-x: auto; border-radius: 16px; box-shadow: 0 6px 32px rgba(27,79,138,0.10); border: 1.5px solid var(--gris-med); margin-bottom: 0.5rem; }
+  .compras-table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+  .compras-table thead tr { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)); }
+  .compras-table thead th { font-family: 'Barlow Condensed', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blanco); padding: 1rem 1.1rem; text-align: left; border: none; white-space: nowrap; }
+  .compras-table thead th:first-child { border-radius: 14px 0 0 0; text-align: center; width: 70px; }
+  .compras-table thead th:last-child { border-radius: 0 14px 0 0; }
+  .compras-table tbody tr { border-bottom: 1px solid rgba(27,79,138,0.07); transition: background .18s; }
+  .compras-table tbody tr:nth-child(odd)  { background: var(--blanco); }
+  .compras-table tbody tr:nth-child(even) { background: #f4f7fc; }
+  .compras-table tbody tr:hover { background: #e8f0fb; }
+  .compras-table tbody td { padding: 0.85rem 1.1rem; vertical-align: middle; line-height: 1.45; }
+  .td-cant  { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 900; color: var(--azul); text-align: center !important; }
+  .td-item  { font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--azul-oscuro); }
+  .td-item .item-name { font-size: inherit; font-weight: inherit; }
+  .td-val   { text-align: right !important; font-weight: 600; color: #3a5070; white-space: nowrap; }
+  .td-total { text-align: right !important; font-family: 'Barlow Condensed', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--azul); white-space: nowrap; }
+  .compras-table tfoot tr { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)); }
+  .compras-table tfoot td { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; color: var(--blanco); padding: 1rem 1.1rem; }
+  .td-total-label { text-align: right; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.88rem; opacity: 0.85; border-radius: 0 0 0 14px; }
+  .td-total-sum { text-align: right !important; font-size: 1.4rem; font-weight: 900; color: var(--dorado) !important; border-radius: 0 0 14px 0; white-space: nowrap; }
+
+  /* RESUMEN FINANCIERO */
+  .fin-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+  .fin-card { border-radius: 16px; padding: 2rem 1.8rem; text-align: center; box-shadow: 0 6px 28px var(--sombra); display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+  .fin-card--costos  { background: linear-gradient(135deg, var(--azul-oscuro), #0b2247); border-top: 4px solid var(--azul-claro); }
+  .fin-card--ingresos { background: linear-gradient(135deg, #0d4a1a, #062b0f); border-top: 4px solid #4ade80; }
+  .fin-card--gastos  { background: linear-gradient(135deg, #4a1200, #2a0a00); border-top: 4px solid var(--dorado); }
+  .fin-icon { font-size: 2.4rem; line-height: 1; }
+  .fin-label { font-family: 'Barlow Condensed', sans-serif; font-weight: 800; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.75); }
+  .fin-valor { font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 2rem; color: var(--dorado); line-height: 1; }
+  .fin-card--ingresos .fin-valor { color: #4ade80; }
+  .fin-nota { font-size: 0.78rem; color: rgba(255,255,255,0.45); margin-top: 0.2rem; }
+  @media (max-width: 768px) { .fin-grid { grid-template-columns: 1fr; } }
+
+  /* GANTT / PLANIFICACIÓN */
+  .gantt-wrap { border-radius: 16px; overflow: hidden; box-shadow: 0 6px 32px var(--sombra); border: 1.5px solid var(--gris-med); margin-top: 1.5rem; }
+  .gantt-table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+
+  /* Header */
+  .gantt-table thead tr { background: linear-gradient(90deg, var(--azul-oscuro), var(--azul)); }
+  .gantt-th-act { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blanco); padding: 1rem 1.4rem; text-align: left; width: 60%; border-radius: 14px 0 0 0; }
+  .gantt-th-mes { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 0.88rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--dorado); padding: 1rem 0; text-align: center; width: 13.3%; }
+  .gantt-th-mes:last-child { border-radius: 0 14px 0 0; }
+
+  /* Categorías */
+  .gantt-cat td { background: linear-gradient(90deg, rgba(27,79,138,0.12), rgba(27,79,138,0.04)); padding: 0.55rem 1.4rem; font-family: 'Barlow Condensed', sans-serif; font-weight: 900; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--azul); border-left: 4px solid var(--azul-claro); }
+  .gantt-cat--admin td { color: var(--dorado-oscuro); border-left-color: var(--dorado); background: linear-gradient(90deg, rgba(245,168,0,0.08), rgba(245,168,0,0.02)); }
+  .gantt-cat i { margin-right: 0.5rem; }
+
+  /* Filas */
+  .gantt-row { border-bottom: 1px solid rgba(27,79,138,0.07); transition: background .18s; }
+  .gantt-row:nth-child(odd)  { background: var(--blanco); }
+  .gantt-row:nth-child(even) { background: #f6f9ff; }
+  .gantt-row:hover { background: #eaf2ff; }
+  .gantt-act { padding: 0.85rem 1.4rem; color: var(--texto-oscuro); font-size: 0.92rem; line-height: 1.4; }
+
+  /* Celdas mes */
+  .gantt-on, .gantt-off { text-align: center; padding: 0.6rem 0.4rem; vertical-align: middle; }
+  .gantt-on  { background: linear-gradient(135deg, var(--dorado), #e89400); position: relative; }
+  .gantt-on::after  { content: ''; display: block; width: 18px; height: 18px; border-radius: 4px; background: rgba(255,255,255,0.25); margin: 0 auto; }
+  .gantt-off { background: rgba(27,79,138,0.03); }
+
+  /* Leyenda */
+  .gantt-leyenda { display: flex; gap: 2rem; margin-top: 1rem; }
+  .gantt-ley-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.84rem; color: #4a6080; }
+  .gantt-dot { width: 16px; height: 16px; border-radius: 4px; display: inline-block; flex-shrink: 0; }
+  .gantt-dot--on  { background: linear-gradient(135deg, var(--dorado), #e89400); }
+  .gantt-dot--off { background: rgba(27,79,138,0.08); border: 1.5px solid var(--gris-med); }
+
+  /* FOOTER */
+  footer { background: var(--texto-oscuro); border-top: 3px solid var(--dorado); padding: 2.5rem 2rem; text-align: center; }
+  footer img { height: 36px; object-fit: contain; opacity: 0.9; margin: 0 0.8rem; mix-blend-mode: screen; }
+  .footer-copy { margin-top: 1.1rem; font-size: 0.82rem; color: #5a7898; letter-spacing: 0.04em; }
 
   /* NAV HAMBURGER */
   .nav-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:8px; z-index:1002; flex-shrink:0; }
