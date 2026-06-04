@@ -87,6 +87,7 @@
   .dist-potable { background: linear-gradient(135deg, var(--azul-oscuro), #0b2247); border-left: 5px solid var(--azul-claro); }
   .dist-riego { background: linear-gradient(135deg, #1a4030, #0d2218); border-left: 5px solid #4ade80; }
   .dist-apoyo { background: linear-gradient(135deg, #3d2200, #1f1100); border-left: 5px solid var(--dorado); }
+  .dist-municipal { background: linear-gradient(135deg, #1a1a3e, #0d0d26); border-left: 5px solid #a78bfa; }
   .dist-num { font-family: 'Barlow Condensed', sans-serif; font-size: 4rem; font-weight: 900; color: var(--dorado); line-height: 1; flex-shrink: 0; min-width: 80px; text-align: center; }
   .dist-type { font-family: 'Barlow Condensed', sans-serif; font-size: 1.15rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: var(--dorado); margin-bottom: 0.4rem; }
   .dist-desc { font-size: 0.9rem; color: rgba(255,255,255,0.82); line-height: 1.55; }
