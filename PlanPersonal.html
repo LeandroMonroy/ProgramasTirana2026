@@ -19,7 +19,7 @@
     <button class="nav-toggle" aria-label="Abrir menú">
     <span></span><span></span><span></span>
   </button>
-    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="#analisis">An&aacute;lisis</a></li></ul>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="#analisis">An&aacute;lisis</a></li><li><a href="#detalle">Detalle</a></li></ul>
 </nav>
 
 <!-- HERO -->
@@ -41,26 +41,41 @@
   <div class="container">
     <div class="section-tag">Direcci&oacute;n de Administraci&oacute;n y Finanzas</div>
     <h2 class="section-title">An&aacute;lisis de <span>Gasto en Personal</span></h2>
-    <p class="section-desc">Festividad La Tirana 2026 &middot; Per&iacute;odo: 01&ndash;31 julio 2026</p>
 
-    <div class="gasto-gadgets reveal">
-      <div class="gasto-gadget gasto-gadget--presupuesto">
-        <div class="gg-icon">&#x1F4B8;</div>
-        <div class="gg-val">$153.348.380</div>
-        <div class="gg-label">Presupuesto Total</div>
-        <div class="gg-sub">CLP &middot; 15 programas</div>
+    <div class="gasto-header-layout reveal">
+      <div class="gasto-gadgets">
+        <div class="gasto-gadget gasto-gadget--presupuesto">
+          <div class="gg-icon">&#x1F4B8;</div>
+          <div class="gg-val">$153.348.380</div>
+          <div class="gg-label">Presupuesto Total</div>
+          <div class="gg-sub">CLP &middot; 15 programas</div>
+        </div>
+        <div class="gasto-gadget gasto-gadget--personas">
+          <div class="gg-icon">&#x1F465;</div>
+          <div class="gg-val">183</div>
+          <div class="gg-label">N&ordm; de Personas</div>
+          <div class="gg-sub">cargos contratados</div>
+        </div>
+        <div class="gasto-gadget gasto-gadget--programas">
+          <div class="gg-icon">&#x1F4CB;</div>
+          <div class="gg-val">15</div>
+          <div class="gg-label">N&ordm; de Programas</div>
+          <div class="gg-sub">l&iacute;neas de trabajo</div>
+        </div>
       </div>
-      <div class="gasto-gadget gasto-gadget--personas">
-        <div class="gg-icon">&#x1F465;</div>
-        <div class="gg-val">183</div>
-        <div class="gg-label">N&ordm; de Personas</div>
-        <div class="gg-sub">cargos contratados</div>
-      </div>
-      <div class="gasto-gadget gasto-gadget--programas">
-        <div class="gg-icon">&#x1F4CB;</div>
-        <div class="gg-val">15</div>
-        <div class="gg-label">N&ordm; de Programas</div>
-        <div class="gg-sub">l&iacute;neas de trabajo</div>
+      <div class="tasas-wrap">
+        <div class="tasas-header">
+          <i class="fa-solid fa-scale-balanced"></i>
+          <span>Tasas Diarias de Referencia &mdash; Ley de Remuneraciones</span>
+        </div>
+        <table class="tasas-table">
+          <thead><tr><th>Fracci&oacute;n</th><th>Corte 1 (CLP/d&iacute;a)</th><th>Corte 2 (CLP/d&iacute;a)</th></tr></thead>
+          <tbody>
+            <tr><td>40%</td><td>$26.700</td><td>$32.900</td></tr>
+            <tr><td>60%</td><td>$40.051</td><td>$49.349</td></tr>
+            <tr><td>100%</td><td>$66.751</td><td>$82.249</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
@@ -93,30 +108,175 @@
           <tr><td class="gasto-prog">Secretar&iacute;a Municipal</td><td class="gasto-periodo">09/07&ndash;19/07</td><td class="gasto-num">2</td><td class="td-val">$1.490.000</td><td class="gasto-pct">1,0%</td><td class="gasto-nivel"><span class="nivel nivel--bajo">Bajo</span></td></tr>
         </tbody>
         <tfoot><tr>
-          <td colspan="2" class="td-total-label">Total General</td>
-          <td style="text-align:center;font-family:Barlow Condensed,sans-serif;font-weight:900;font-size:1.2rem;color:var(--dorado);">183</td>
-          <td class="td-total-sum">$153.348.380</td>
-          <td style="text-align:center;color:rgba(255,255,255,0.7);font-family:Barlow Condensed,sans-serif;font-weight:700;">100,0%</td>
-          <td></td>
+          <td colspan="4" class="td-total-label">Total General &mdash; 183 personas &mdash; 100,0%</td>
+          <td class="td-total-sum" colspan="2">$153.348.380</td>
         </tr></tfoot>
       </table>
     </div>
 
-    <div class="tasas-wrap reveal">
-      <div class="tasas-header">
-        <i class="fa-solid fa-scale-balanced"></i>
-        <span>Tasas Diarias de Referencia &mdash; Ley de Remuneraciones</span>
-      </div>
-      <table class="tasas-table">
-        <thead><tr><th>Fracci&oacute;n</th><th>Corte 1 (CLP/d&iacute;a)</th><th>Corte 2 (CLP/d&iacute;a)</th></tr></thead>
-        <tbody>
-          <tr><td>40%</td><td>$26.700</td><td>$32.900</td></tr>
-          <tr><td>60%</td><td>$40.051</td><td>$49.349</td></tr>
-          <tr><td>100%</td><td>$66.751</td><td>$82.249</td></tr>
-        </tbody>
-      </table>
-    </div>
 
+  </div>
+</section>
+
+
+<!-- DETALLE POR PROGRAMA -->
+<section id="detalle">
+  <div class="container">
+    <div class="section-tag">Dotación por Unidad</div>
+    <h2 class="section-title">Detalle de Personal <span>por Programa</span></h2>
+    <div class="dp-grid">
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Gestión de Residuos (01-25/07)</span><span class="dp-periodo">01/07 – 25/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Encargado Programa</td><td class="dp-cat">Secretario Municipal</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 1.875.278</td></tr>
+<tr><td class="dp-cargo">Administrativo Programa Gestión de Residuos</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.521.922</td></tr>
+<tr><td class="dp-cargo">Apoyo bodega</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.521.922</td></tr>
+<tr><td class="dp-cargo">Puntero zanja sanitaria</td><td class="dp-cat">Puntero</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.521.922</td></tr>
+<tr><td class="dp-cargo">Supervisores cuadrilla</td><td class="dp-cat">Supervisores</td><td class="dp-n">3</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 4.565.766</td></tr>
+<tr><td class="dp-cargo">Barrido La Tirana</td><td class="dp-cat">Barrido</td><td class="dp-n">9</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 13.697.298</td></tr>
+<tr><td class="dp-cargo">Limpieza de Estadio Tirana</td><td class="dp-cat">Conductor</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.521.922</td></tr>
+<tr><td class="dp-cargo">Conductor camión Tolva</td><td class="dp-cat">Conductor</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.521.922</td></tr>
+<tr><td class="dp-cargo">Conductor minicargador</td><td class="dp-cat">Conductor</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.521.922</td></tr>
+<tr><td class="dp-cargo">Conductor camión compactador</td><td class="dp-cat">Conductor</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.521.922</td></tr>
+<tr><td class="dp-cargo">Porter programa REP</td><td class="dp-cat">Conductor</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.521.922</td></tr>
+<tr><td class="dp-cargo">Barrido programa REP</td><td class="dp-cat">Auxiliares</td><td class="dp-n">6</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 9.131.532</td></tr>
+<tr><td class="dp-cargo">Conductor camión centinela REP</td><td class="dp-cat">Conductor</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.521.922</td></tr>
+<tr><td class="dp-cargo">Peonetas programa REP</td><td class="dp-cat">Auxiliares</td><td class="dp-n">4</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 6.087.688</td></tr>
+<tr><td class="dp-cargo">Peonetas DIMAO</td><td class="dp-cat">Auxiliares</td><td class="dp-n">4</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 6.087.688</td></tr>
+<tr><td class="dp-cargo">Conductor bus</td><td class="dp-cat">Conductor</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.521.922</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">37</td><td></td><td class="dp-foot-sum">$ 56.664.470</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Seguridad Pública</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Coordinación General Programa Seguridad La Tirana 2026.</td><td class="dp-cat">Director</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Jefe Seguridad y cámaras Programa Seguridad La Tirana 2026.</td><td class="dp-cat">Profesional</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Administrativo Programa Seguridad La Tirana 2026.</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Inspectores Seguridad</td><td class="dp-cat">Inspectores</td><td class="dp-n">18</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 12.015.180</td></tr>
+<tr><td class="dp-cargo">Operador CCTV</td><td class="dp-cat">Revisor Espacios</td><td class="dp-n">8</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 5.340.080</td></tr>
+<tr><td class="dp-cargo">Encargado Emergencia</td><td class="dp-cat">Prevencionista</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Guardia Recinto Municipal</td><td class="dp-cat">—</td><td class="dp-n">12</td><td class="dp-tarifa"><span class="dp-badge tarifa-bono">Bono</span></td><td class="dp-sub">$ 0</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">42</td><td></td><td class="dp-foot-sum">$ 20.180.280</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Gestión de Residuos (09-20/07)</span><span class="dp-periodo">09/07 – 20/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Supervisores cuadrillas</td><td class="dp-cat">—</td><td class="dp-n">3</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 2.202.783</td></tr>
+<tr><td class="dp-cargo">Peonetas DIMAO</td><td class="dp-cat">—</td><td class="dp-n">2</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.468.522</td></tr>
+<tr><td class="dp-cargo">Chofer retroexcavadora</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 734.261</td></tr>
+<tr><td class="dp-cargo">Chofer moto sustentable</td><td class="dp-cat">—</td><td class="dp-n">2</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.468.522</td></tr>
+<tr><td class="dp-cargo">Barrido MEP</td><td class="dp-cat">—</td><td class="dp-n">4</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 2.937.044</td></tr>
+<tr><td class="dp-cargo">Aseo MEP</td><td class="dp-cat">—</td><td class="dp-n">3</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 2.202.783</td></tr>
+<tr><td class="dp-cargo">Áreas verdes</td><td class="dp-cat">—</td><td class="dp-n">4</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 2.937.044</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">19</td><td></td><td class="dp-foot-sum">$ 13.950.959</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Rentas</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Encargado Programa Rentas Tirana 2026</td><td class="dp-cat">Técnico</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Administrativo Programa</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Inspectores Rentas Comercio</td><td class="dp-cat">Supervisor</td><td class="dp-n">7</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 4.672.570</td></tr>
+<tr><td class="dp-cargo">Inspectores Rentas Residuos</td><td class="dp-cat">Cajero Punto</td><td class="dp-n">4</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 2.670.040</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">13</td><td></td><td class="dp-foot-sum">$ 8.987.590</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Administración y Finanzas</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Encargado Personal</td><td class="dp-cat">Técnico</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Técnico Personal</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Administrativo Personal</td><td class="dp-cat">Supervisor</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Administrativo Contabilidad</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Administrativo Remuneraciones</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Administrativo Finanzas</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Encargado Adquisiciones</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Administrativo Adquisiciones</td><td class="dp-cat">Administrativo</td><td class="dp-n">2</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.335.020</td></tr>
+<tr><td class="dp-cargo">Bodega Adquisiciones</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Encargado Tesorería</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Cajero Tesorería</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">12</td><td></td><td class="dp-foot-sum">$ 8.320.080</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Personal Programa de Trabajo</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Coordinación General del Estacionamiento La Tirana.</td><td class="dp-cat">Director</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Supervisión Programa Licitación Estacionamiento, inspectores</td><td class="dp-cat">Administrativos</td><td class="dp-n">2</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.335.020</td></tr>
+<tr><td class="dp-cargo">Mantención, señales tránsito, demarcación y cierre del pueblo</td><td class="dp-cat">Auxiliares</td><td class="dp-n">2</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.335.020</td></tr>
+<tr><td class="dp-cargo">Atención público durante la festividad</td><td class="dp-cat">Administrativos</td><td class="dp-n">4</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 2.670.040</td></tr>
+<tr><td class="dp-cargo">Inspector Paradero Locomoción colectiva</td><td class="dp-cat">Administrativos</td><td class="dp-n">2</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.335.020</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">11</td><td></td><td class="dp-foot-sum">$ 7.497.590</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">DIMAO Residuos (09-19/07)</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Director DIMAO</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Encargado Flota DIMAO</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Administrativo DIMAO</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Auxiliar</td><td class="dp-cat">—</td><td class="dp-n">2</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.335.020</td></tr>
+<tr><td class="dp-cargo">Polifuncional</td><td class="dp-cat">—</td><td class="dp-n">2</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.335.020</td></tr>
+<tr><td class="dp-cargo">Conductores DIMAO</td><td class="dp-cat">—</td><td class="dp-n">3</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 2.002.530</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">10</td><td></td><td class="dp-foot-sum">$ 6.985.060</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Abastecimiento Agua Potable y Regadío</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Encargado Programa Agua Potable y Regadío Tirana 2026</td><td class="dp-cat">Profesional</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Supervisores</td><td class="dp-cat">Supervisor</td><td class="dp-n">8</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 5.340.080</td></tr>
+<tr><td class="dp-cargo">Peoneta</td><td class="dp-cat">Peoneta</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">10</td><td></td><td class="dp-foot-sum">$ 6.675.100</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Mejoramiento Espacios Públicos</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Encargado MEP La Tirana 2026.</td><td class="dp-cat">Profesional</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Personal MEP</td><td class="dp-cat">Mantención</td><td class="dp-n">8</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 5.340.080</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">9</td><td></td><td class="dp-foot-sum">$ 6.007.590</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Barreras</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Encargado Programa de Barreras Tirana 2026</td><td class="dp-cat">Técnico</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Administrativo Programa</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+<tr><td class="dp-cargo">Supervisores</td><td class="dp-cat">Supervisor</td><td class="dp-n">5</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 3.337.550</td></tr>
+<tr><td class="dp-cargo">Cajero Punto Pago</td><td class="dp-cat">Cajero Punto</td><td class="dp-n">2</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.335.020</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">9</td><td></td><td class="dp-foot-sum">$ 6.007.590</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Gestión de Residuos (01-31/07)</span><span class="dp-periodo">01/07 – 31/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Chofer maquinaria Zanja Sanitaria</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.882.377</td></tr>
+<tr><td class="dp-cargo">Conductor Camión Multipropósito</td><td class="dp-cat">Conductor</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.882.377</td></tr>
+<tr><td class="dp-cargo">Chofer camión tolva Zanja Sanitaria</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 1.882.377</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">3</td><td></td><td class="dp-foot-sum">$ 5.647.131</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Control Interno</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Director Control Interno</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Fiscalización</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">2</td><td></td><td class="dp-foot-sum">$ 1.644.980</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Alcaldía</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Alcalde</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Administrador Municipal</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">2</td><td></td><td class="dp-foot-sum">$ 1.644.980</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Obras Municipales</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Director Obras Municipales</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Jefe de Obras Municipales</td><td class="dp-cat">—</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">2</td><td></td><td class="dp-foot-sum">$ 1.644.980</td></tr></tfoot></table></div>
+</div>
+<div class="dp-card reveal">
+  <div class="dp-header"><span class="dp-nombre">Secretaría Municipal</span><span class="dp-periodo">09/07 – 19/07</span></div>
+  <div class="dp-table-wrap"><table class="dp-table"><thead><tr><th>Cargo / Función</th><th>Categoría</th><th>Nº</th><th>Tarifa</th><th>Subtotal CLP</th></tr></thead><tbody>
+<tr><td class="dp-cargo">Secretario Municipal</td><td class="dp-cat">Secretario Municipal</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c2">Corte 2</span></td><td class="dp-sub">$ 822.490</td></tr>
+<tr><td class="dp-cargo">Administrativo SECMU</td><td class="dp-cat">Administrativo</td><td class="dp-n">1</td><td class="dp-tarifa"><span class="dp-badge tarifa-c1">Corte 1</span></td><td class="dp-sub">$ 667.510</td></tr>
+</tbody><tfoot><tr><td colspan="2" class="dp-foot-label">Subtotal personas</td><td class="dp-foot-n">2</td><td></td><td class="dp-foot-sum">$ 1.490.000</td></tr></tfoot></table></div>
+</div>
+    </div>
   </div>
 </section>
 
