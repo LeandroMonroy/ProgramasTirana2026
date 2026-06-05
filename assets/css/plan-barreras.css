@@ -242,11 +242,9 @@ section:nth-child(even):not(.hero) { background: var(--blanco); }
 .turnos-fullscreen {
   background: #0b1e3e !important;
   min-height: 78vh;
-  max-height: 78vh;
   padding: 0 !important;
   display: flex;
   align-items: stretch;
-  overflow: hidden;
 }
 .turnos-inner {
   width: 100%;
