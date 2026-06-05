@@ -300,7 +300,6 @@
     url('../img/Barreras.png');
   background-size: cover;
   background-position: center;
-  border-bottom: 3px solid #F5A800;
 }
 .card-barreras { border-color: rgba(245,168,0,0.25); }
 .card-barreras:hover { border-color: #F5A800; box-shadow: 0 18px 50px rgba(245,168,0,0.18); }
@@ -308,19 +307,17 @@
 /* ESTACIONAMIENTOS */
 .card-estacionamientos .prog-card-header {
   background:
-    linear-gradient(160deg, rgba(5,12,28,0.72) 0%, rgba(10,30,70,0.60) 50%, rgba(5,12,28,0.75) 100%),
+    linear-gradient(160deg, rgba(4,9,22,0.62) 0%, rgba(5,18,50,0.48) 100%),
     url('../img/Estacionamientos.png');
   background-size: cover;
   background-position: center;
-  border-bottom: 3px solid #2a6fc4;
 }
 .card-estacionamientos { border-color: rgba(42,111,196,0.25); }
 .card-estacionamientos:hover { border-color: #2a6fc4; box-shadow: 0 18px 50px rgba(42,111,196,0.22); }
 
 /* GASTO PERSONAL */
 .card-personal .prog-card-header {
-  background: linear-gradient(160deg, rgba(4,22,10,0.80) 0%, rgba(8,50,18,0.65) 100%);
-  border-bottom: 3px solid #4ade80;
+  background: linear-gradient(160deg, rgba(4,9,22,0.85) 0%, rgba(8,30,14,0.75) 50%, rgba(4,40,16,0.85) 100%);
 }
-.card-personal { border-color: rgba(74,222,128,0.25); }
-.card-personal:hover { border-color: #4ade80; box-shadow: 0 18px 50px rgba(74,222,128,0.18); }
+.card-personal { border-color: rgba(74,222,128,0.2); }
+.card-personal:hover { border-color: #4ade80; box-shadow: 0 18px 50px rgba(74,222,128,0.15); }
