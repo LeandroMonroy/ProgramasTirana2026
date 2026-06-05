@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <link rel="stylesheet" href="assets/css/plan-personal.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
 
@@ -19,7 +20,7 @@
     <button class="nav-toggle" aria-label="Abrir menú">
     <span></span><span></span><span></span>
   </button>
-    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="#analisis">An&aacute;lisis</a></li><li><a href="#detalle">Detalle</a></li></ul>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="#analisis">An&aacute;lisis</a></li><li><a href="#detalle">Detalle</a></li><li><a href="#comparativo">Comparativo</a></li></ul>
 </nav>
 
 <!-- HERO -->
@@ -279,6 +280,165 @@
     </div>
   </div>
 </section>
+
+<!-- ANÁLISIS COMPARATIVO -->
+<section id="comparativo" class="comparativo-section">
+  <div class="container">
+    <div class="section-tag reveal">Presupuesto</div>
+    <h2 class="section-title reveal">An&#225;lisis Comparativo &#8212; <span>Distribuci&#243;n del Gasto por Programa</span></h2>
+    <p class="comp-subtitle reveal">Municipalidad de Pozo Almonte &middot; La Tirana 2026 &middot; Total: $153.348.380 CLP &middot; 183 personas</p>
+
+    <!-- TABLA -->
+    <div class="comp-table-wrap reveal">
+      <table class="comp-table">
+        <thead>
+          <tr>
+            <th>Programa / Unidad</th>
+            <th>Personas</th>
+            <th>Total CLP</th>
+            <th>% del Total</th>
+            <th>Distribuci&#243;n Visual</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="nivel-alto"><td>Gesti&#243;n de Residuos (01-25/07)</td><td>37</td><td>$56.664.470</td><td>37,0%</td><td><div class="dist-wrap"><div class="dist-bar dist-alto" style="width:37%"></div><span>37,0%</span></div></td></tr>
+          <tr class="nivel-alto"><td>Seguridad P&#250;blica</td><td>42</td><td>$20.180.280</td><td>13,2%</td><td><div class="dist-wrap"><div class="dist-bar dist-alto" style="width:13.2%"></div><span>13,2%</span></div></td></tr>
+          <tr class="nivel-medio"><td>Gesti&#243;n de Residuos (09-20/07)</td><td>19</td><td>$13.950.959</td><td>9,1%</td><td><div class="dist-wrap"><div class="dist-bar dist-medio" style="width:9.1%"></div><span>9,1%</span></div></td></tr>
+          <tr class="nivel-medio"><td>Rentas</td><td>13</td><td>$8.987.590</td><td>5,9%</td><td><div class="dist-wrap"><div class="dist-bar dist-medio" style="width:5.9%"></div><span>5,9%</span></div></td></tr>
+          <tr class="nivel-medio"><td>Administraci&#243;n y Finanzas</td><td>12</td><td>$8.320.080</td><td>5,4%</td><td><div class="dist-wrap"><div class="dist-bar dist-medio" style="width:5.4%"></div><span>5,4%</span></div></td></tr>
+          <tr class="nivel-medio"><td>Personal Programa de Trabajo</td><td>11</td><td>$7.497.590</td><td>4,9%</td><td><div class="dist-wrap"><div class="dist-bar dist-medio" style="width:4.9%"></div><span>4,9%</span></div></td></tr>
+          <tr class="nivel-medio"><td>DIMAO Residuos (09-19/07)</td><td>10</td><td>$6.985.060</td><td>4,6%</td><td><div class="dist-wrap"><div class="dist-bar dist-medio" style="width:4.6%"></div><span>4,6%</span></div></td></tr>
+          <tr class="nivel-medio"><td>Abastecimiento Agua Potable y Regad&#237;o</td><td>10</td><td>$6.675.100</td><td>4,4%</td><td><div class="dist-wrap"><div class="dist-bar dist-medio" style="width:4.4%"></div><span>4,4%</span></div></td></tr>
+          <tr class="nivel-medio"><td>Mejoramiento Espacios P&#250;blicos</td><td>9</td><td>$6.007.590</td><td>3,9%</td><td><div class="dist-wrap"><div class="dist-bar dist-medio" style="width:3.9%"></div><span>3,9%</span></div></td></tr>
+          <tr class="nivel-medio"><td>Barreras</td><td>9</td><td>$6.007.590</td><td>3,9%</td><td><div class="dist-wrap"><div class="dist-bar dist-medio" style="width:3.9%"></div><span>3,9%</span></div></td></tr>
+          <tr class="nivel-medio"><td>Gesti&#243;n de Residuos (01-31/07)</td><td>3</td><td>$5.647.131</td><td>3,7%</td><td><div class="dist-wrap"><div class="dist-bar dist-medio" style="width:3.7%"></div><span>3,7%</span></div></td></tr>
+          <tr class="nivel-bajo"><td>Control Interno</td><td>2</td><td>$1.644.980</td><td>1,1%</td><td><div class="dist-wrap"><div class="dist-bar dist-bajo" style="width:1.1%"></div><span>1,1%</span></div></td></tr>
+          <tr class="nivel-bajo"><td>Alcald&#237;a</td><td>2</td><td>$1.644.980</td><td>1,1%</td><td><div class="dist-wrap"><div class="dist-bar dist-bajo" style="width:1.1%"></div><span>1,1%</span></div></td></tr>
+          <tr class="nivel-bajo"><td>Obras Municipales</td><td>2</td><td>$1.644.980</td><td>1,1%</td><td><div class="dist-wrap"><div class="dist-bar dist-bajo" style="width:1.1%"></div><span>1,1%</span></div></td></tr>
+          <tr class="nivel-bajo"><td>Secretar&#237;a Municipal</td><td>2</td><td>$1.490.000</td><td>1,0%</td><td><div class="dist-wrap"><div class="dist-bar dist-bajo" style="width:1%"></div><span>1,0%</span></div></td></tr>
+        </tbody>
+        <tfoot>
+          <tr class="comp-total"><td>TOTAL GENERAL</td><td>183</td><td>$153.348.380</td><td>100,0%</td><td></td></tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- LEYENDA -->
+    <div class="comp-leyenda reveal">
+      <div class="ley-title">LEYENDA &#8212; NIVEL DE GASTO</div>
+      <div class="ley-items">
+        <div class="ley-item ley-alto"><span class="ley-dot"></span><div><strong>Alto</strong><span>&#8805; 10% del presupuesto total (&gt; $15.334.838)</span></div></div>
+        <div class="ley-item ley-medio"><span class="ley-dot"></span><div><strong>Medio</strong><span>3% a 10% del presupuesto total</span></div></div>
+        <div class="ley-item ley-bajo"><span class="ley-dot"></span><div><strong>Bajo</strong><span>&lt; 3% del presupuesto total</span></div></div>
+      </div>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="comp-dashboard reveal">
+      <div class="dash-card dash-card--wide">
+        <div class="dash-card-title"><i class="fa-solid fa-chart-pie"></i> Distribuci&#243;n del Gasto</div>
+        <canvas id="chartDonut" height="280"></canvas>
+      </div>
+      <div class="dash-card">
+        <div class="dash-card-title"><i class="fa-solid fa-users"></i> Personas por Programa</div>
+        <canvas id="chartPersonas" height="280"></canvas>
+      </div>
+      <div class="dash-card dash-card--full">
+        <div class="dash-card-title"><i class="fa-solid fa-chart-bar"></i> Comparativa Gasto vs Dotaci&#243;n</div>
+        <canvas id="chartComparativa" height="180"></canvas>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+(function() {
+  var labels = [
+    'Gest. Residuos (01-25/07)',
+    'Seguridad Pública',
+    'Gest. Residuos (09-20/07)',
+    'Rentas',
+    'Adm. y Finanzas',
+    'Prog. de Trabajo',
+    'DIMAO Residuos',
+    'Agua Potable',
+    'Mej. Espacios',
+    'Barreras',
+    'Gest. Residuos (01-31/07)',
+    'Control Interno',
+    'Alcaldía',
+    'Obras Municipales',
+    'Secretaría Municipal'
+  ];
+  var totales = [56664470,20180280,13950959,8987590,8320080,7497590,6985060,6675100,6007590,6007590,5647131,1644980,1644980,1644980,1490000];
+  var personas = [37,42,19,13,12,11,10,10,9,9,3,2,2,2,2];
+  var pcts = [37.0,13.2,9.1,5.9,5.4,4.9,4.6,4.4,3.9,3.9,3.7,1.1,1.1,1.1,1.0];
+
+  var colorsAlto  = ['#c0392b','#e74c3c'];
+  var colorsMedio = ['#ca8a04','#d97706','#eab308','#f59e0b','#fbbf24','#ca8a04','#b45309','#d97706','#a16207','#92400e'];
+  var colorsBajo  = ['#16a34a','#22c55e','#15803d','#4ade80'];
+  var allColors = colorsAlto.concat(colorsMedio).concat(colorsBajo);
+
+  var azul = '#1B4F8A', azulOsc = '#0d3060', dorado = '#F5A800';
+  var fontOpts = { family: "'Barlow Condensed', sans-serif", size: 12, weight: '600' };
+
+  // Donut
+  new Chart(document.getElementById('chartDonut'), {
+    type: 'doughnut',
+    data: {
+      labels: labels,
+      datasets: [{ data: totales, backgroundColor: allColors, borderWidth: 2, borderColor: '#fff' }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: {
+        legend: { position: 'right', labels: { font: fontOpts, color: azulOsc, boxWidth: 14, padding: 10 } },
+        tooltip: { callbacks: { label: function(c) { return ' $' + c.raw.toLocaleString('es-CL') + ' (' + pcts[c.dataIndex] + '%)'; } } }
+      }
+    }
+  });
+
+  // Personas horizontal bar
+  new Chart(document.getElementById('chartPersonas'), {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{ label: 'Personas', data: personas, backgroundColor: allColors, borderRadius: 4, borderSkipped: false }]
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c) { return ' ' + c.raw + ' personas'; } } } },
+      scales: {
+        x: { grid: { color: 'rgba(27,79,138,0.08)' }, ticks: { font: fontOpts, color: azulOsc } },
+        y: { grid: { display: false }, ticks: { font: { family: "'Barlow', sans-serif", size: 11 }, color: azulOsc } }
+      }
+    }
+  });
+
+  // Comparativa bar
+  new Chart(document.getElementById('chartComparativa'), {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [
+        { label: 'Gasto CLP (millones)', data: totales.map(function(v){ return Math.round(v/1000000*10)/10; }), backgroundColor: azul, borderRadius: 4, yAxisID: 'y' },
+        { label: 'Personas', data: personas, backgroundColor: dorado, borderRadius: 4, yAxisID: 'y2' }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { labels: { font: fontOpts, color: azulOsc } } },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { family: "'Barlow', sans-serif", size: 10 }, color: azulOsc, maxRotation: 35 } },
+        y: { position: 'left', grid: { color: 'rgba(27,79,138,0.08)' }, ticks: { font: fontOpts, color: azul }, title: { display: true, text: 'Millones CLP', font: fontOpts, color: azul } },
+        y2: { position: 'right', grid: { display: false }, ticks: { font: fontOpts, color: '#c98a00' }, title: { display: true, text: 'Personas', font: fontOpts, color: '#c98a00' } }
+      }
+    }
+  });
+})();
+</script>
+
 
 <script>
   const reveals = document.querySelectorAll(".reveal");
